@@ -1,3 +1,5 @@
+// import Deck from "./deck";
+
 function Hand(deck){
     this.hand = [null, null, null, null, null];
     this.deck = deck;
@@ -28,3 +30,5 @@ Hand.prototype.findMissingCardIndex = function(){
         if (i === null) return i;
     }
 }
+
+export default Hand;
