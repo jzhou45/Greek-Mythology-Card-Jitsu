@@ -13,3 +13,10 @@ Deck.prototype.shuffle = function(){
 Deck.prototype.draw = function(){
     return this.cards.pop();
 }
+
+Deck.prototype.isEmpty = function(){
+    if (this.cards.length === 0) return true;
+    return false;
+}
+
+// add refresh function in case deck runs out and the game hasn't ended
