@@ -19,4 +19,9 @@ Deck.prototype.isEmpty = function(){
     return false;
 }
 
+Deck.prototype.remainingCards = function(){
+    return this.cards.length;
+}
+
+export default Deck;
 // add refresh function in case deck runs out and the game hasn't ended
