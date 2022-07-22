@@ -33,5 +33,12 @@ Greek Mythology Card-Jitsu will be made with Vanilla JavaScript through DOM Mani
   * Friday Afternoon & Weekend: Develop game logic and functionality, along with simple A.I.
   * Monday: Make HTML shell and set up DOM Manipulation
   * Tuesday: Create decks for users and A.I. along with art associated with it, along with starting JavaScript and CSS animations
-  * Wednesday: Finish up animations
-  * Thursday Morning: Ensure game is demo-ready
+  * Wednesday: Finish up animations and quality of life updates
+  * Thursday Morning: Deploy onto Github Pages
+
+## Bonus Features:
+  * Add Power Up Cards
+  * Allow users to view deck list
+  * Allow users to build deck
+  * Allow users to explore more Greek lore and mythology through deck list
+  * Smarter A.I.s
