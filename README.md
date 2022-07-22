@@ -1,4 +1,4 @@
-# Greek Mythology Card-Jitsu
+# Olympus Card-Jitsu
 
 ## Background
 Card-Jitsu is a mini-game that was first introduced in the formerly popular MMORPG, Club Penguin, in November of 2008, with the introduction of ninjas and the Dojo to servers. The card game follows a simple gameplay premise, where players would have decks with cards of three different types, that follow the classic Rock-Paper-Scissors structure, where 1 type would beat another, but lose to the other. The cards would also contain a number value and color associated with it for additional gameplay mechanics, along with cards with special effect that changes the rules of the round it's played in.
@@ -12,7 +12,7 @@ This game will aim to recreate the same game mechanics, involving cards based on
 
 
 ## Functionality & MVPs
-In Greek Mythology Card-Jitsu, players will be able to:
+In Olympus Card-Jitsu, players will be able to:
   * Select against 2 different A.I. opponents
   * Start new games with a shuffled deck
   * Select and play cards from their hand
@@ -27,7 +27,7 @@ In addition, this project will include:
 ![alt text](./wireframe.png)
 
 ## Technologies, Libraries, APIs
-Greek Mythology Card-Jitsu will be made with Vanilla JavaScript through DOM Manipulation.
+Olympus Card-Jitsu will be made with Vanilla JavaScript through DOM Manipulation.
 
 ## Implementation Timeline
   * Friday Afternoon & Weekend: Develop game logic and functionality, along with simple A.I.
