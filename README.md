@@ -24,5 +24,14 @@ In addition, this project will include:
   * Background music
   
 ## Wireframes
+![alt text](./wireframe.png)
 
-  
+## Technologies, Libraries, APIs
+Greek Mythology Card-Jitsu will be made with Vanilla JavaScript through DOM Manipulation.
+
+## Implementation Timeline
+  * Friday Afternoon & Weekend: Develop game logic and functionality, along with simple A.I.
+  * Monday: Make HTML shell and set up DOM Manipulation
+  * Tuesday: Create decks for users and A.I. along with art associated with it, along with starting JavaScript and CSS animations
+  * Wednesday: Finish up animations
+  * Thursday Morning: Ensure game is demo-ready
