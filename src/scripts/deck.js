@@ -9,3 +9,7 @@ Deck.prototype.shuffle = function(){
  }
     return this.cards;
 }
+
+Deck.prototype.draw = function(){
+    return this.cards.pop();
+}
