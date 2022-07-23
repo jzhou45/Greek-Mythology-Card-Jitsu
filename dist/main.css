@@ -60,7 +60,7 @@ table {
     background-color: lightblue;
     border-radius: 20px;
     z-index: 1;
-    margin: 20px;
+    margin: 5vh;
 }
 
 .splash-art{
@@ -92,14 +92,22 @@ table {
 }
 
 .power-num{
+    margin-top: 1vh;
     margin-bottom: 2vh;
+    font-size: 3vh;
 }
-
 
 #hand{
     display: flex;
+    justify-content: center;
     position: absolute;
-
+    bottom: 0;
+    margin-left: 3.25vw;
+    margin-right: auto;
+    width: 92.6vw;
+    height: auto;
+    aspect-ratio: 280/71;
+    background-color: gray;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
