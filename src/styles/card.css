@@ -3,7 +3,6 @@
     width: 9vw;
     aspect-ratio: 36/49;
     height: auto;
-    background-color: lightblue;
     border-radius: 20px;
     z-index: 1;
     margin: 1.5vh;
@@ -28,7 +27,6 @@
     width: 3.5vw;
     height: auto;
     aspect-ratio: 6/7;
-    background-color: lightblue;
     border-radius: 20px;
     z-index: 3;
 }
