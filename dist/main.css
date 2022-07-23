@@ -61,6 +61,7 @@ table {
     border-radius: 20px;
     z-index: 1;
     margin: 5vh;
+    position: relative;
 }
 
 .splash-art{
@@ -94,7 +95,8 @@ table {
 .power-num{
     margin-top: 1vh;
     margin-bottom: 2vh;
-    font-size: 3vh;
+    font-size: 4vh;
+    font-weight: bold;
 }
 
 #hand{
