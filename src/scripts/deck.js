@@ -1,3 +1,5 @@
+import Card from "./card.js"
+
 function Deck(...cards){
     this.cards = cards;
 }
@@ -22,6 +24,7 @@ Deck.prototype.isEmpty = function(){
 Deck.prototype.remainingCards = function(){
     return this.cards.length;
 }
+
 
 export default Deck;
 // add refresh function in case deck runs out and the game hasn't ended

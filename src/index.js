@@ -1,52 +1,62 @@
 import Card from './scripts/card.js';
 import Deck from "./scripts/deck.js";
+import Hand from "./scripts/hand.js";
+import Game from "./scripts/game.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-    var card1 = document.getElementById("card1")
-    var offset1 = card1.getBoundingClientRect();
-    var card1Left = offset1.left;
+    let zeus = new Card("Zeus", "god", "10", "yellow", "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8932fa02-b339-4e8c-99d6-115e7cd29415/d1qn6k2-29220961-dc57-459b-ad1a-4015d7e6067b.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg5MzJmYTAyLWIzMzktNGU4Yy05OWQ2LTExNWU3Y2QyOTQxNVwvZDFxbjZrMi0yOTIyMDk2MS1kYzU3LTQ1OWItYWQxYS00MDE1ZDdlNjA2N2IuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Q5fKUiaddvfZlaLo42gTYWA0YbXxB-UahlYmE3xwSLI");
+    let hera = new Card("Hera", "god", "1", "pink", "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/73fd5feb-8a2e-46e3-8ab9-c764280fb325/d94v10j-7630529f-92fa-4db5-be45-4b1666e7072a.jpg/v1/crop/w_167,h_250,x_0,y_0,scl_0.4175,q_70,strp/hera_by_ninjart1st_d94v10j-250t.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjAwIiwicGF0aCI6IlwvZlwvNzNmZDVmZWItOGEyZS00NmUzLThhYjktYzc2NDI4MGZiMzI1XC9kOTR2MTBqLTc2MzA1MjlmLTkyZmEtNGRiNS1iZTQ1LTRiMTY2NmU3MDcyYS5qcGciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.zRy2xWQLZ4e8ahj-vXwgp5yPj7o8YKGberRXYpBKKEw");
+    let dionysus = new Card("Dionysus", "god", "2", "purple", "https://static.wikia.nocookie.net/hades_gamepedia_en/images/9/90/Dionysus.png/revision/latest?cb=20190215155410");
 
-    var card2 = document.getElementById("card2")
-    var offset2 = card2.getBoundingClientRect();
-    var card2Left = offset2.left;
+    let theseus = new Card("Theseus", "hero", "7", "blue", "https://static.wikia.nocookie.net/hades_gamepedia_en/images/d/d8/Theseus.png/revision/latest?cb=20190508053707");
 
-    var card3 = document.getElementById("card3")
-    var offset3 = card3.getBoundingClientRect();
-    var card3Left = offset3.left;
+    let medusa = new Card("Medusa", "monster", "9", "blue", "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/241f2636-882f-4357-9e99-b9a3cbcfa999/ddkv05n-6105a9aa-faa6-47cc-8ab9-33a7e79ff5df.jpg/v1/fill/w_1024,h_1353,q_75,strp/medusa_by_z__ed_ddkv05n-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTM1MyIsInBhdGgiOiJcL2ZcLzI0MWYyNjM2LTg4MmYtNDM1Ny05ZTk5LWI5YTNjYmNmYTk5OVwvZGRrdjA1bi02MTA1YTlhYS1mYWE2LTQ3Y2MtOGFiOS0zM2E3ZTc5ZmY1ZGYuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.PpPED2cXuDG_OHzYB2UBnFA0-HZ7NNHMV6FP4D_SQ5U");
+    
+    var starterDeck = new Deck(zeus, hera, dionysus, theseus, medusa);
 
-    var card4 = document.getElementById("card4")
-    var offset4 = card4.getBoundingClientRect();
-    var card4Left = offset4.left;
+    var game = new Game(starterDeck);
+    game.start();
 
-    var card5 = document.getElementById("card5")
-    var offset5 = card5.getBoundingClientRect();
-    var card5Left = offset5.left;
+    function setLeft(card){
+        const arr = [];
+        const cardId = document.getElementById(card);
+        arr.push(cardId);
+        const offset = cardId.getBoundingClientRect();
+        arr.push(offset.left);
+        return arr;
+    }
 
-    function setCardPositions(card, left){
+    let card1Arr = setLeft("card1");
+    let card2Arr = setLeft("card2");
+    let card3Arr = setLeft("card3");
+    let card4Arr = setLeft("card4");
+    let card5Arr = setLeft("card5");
+
+
+    function setCardPositions(cardArr){
+        let card = cardArr[0];
+        let left = cardArr[1];
         card.style.position = "fixed";
         card.style.left = left;
     }
 
-    setCardPositions(card1, card1Left);
-    setCardPositions(card2, card2Left);
-    setCardPositions(card3, card3Left);
-    setCardPositions(card4, card4Left);
-    setCardPositions(card5, card5Left);
+    setCardPositions(card1Arr);
+    setCardPositions(card2Arr);
+    setCardPositions(card3Arr);
+    setCardPositions(card4Arr);
+    setCardPositions(card5Arr);
 
-    card1.addEventListener("mouseover", hover, false);
-    card1.addEventListener("mouseout", unhover, false);
+    function addEventListenerToCard(cardArr){
+        const card = cardArr[0];
+        card.addEventListener("mouseover", hover, false);
+        card.addEventListener("mouseout", unhover, false);
+    }
 
-    card2.addEventListener("mouseover", hover, false);
-    card2.addEventListener("mouseout", unhover, false);
-
-    card3.addEventListener("mouseover", hover, false);
-    card3.addEventListener("mouseout", unhover, false);
-
-    card4.addEventListener("mouseover", hover, false);
-    card4.addEventListener("mouseout", unhover, false);
-
-    card5.addEventListener("mouseover", hover, false);
-    card5.addEventListener("mouseout", unhover, false);
+    addEventListenerToCard(card1Arr);
+    addEventListenerToCard(card2Arr);
+    addEventListenerToCard(card3Arr);
+    addEventListenerToCard(card4Arr);
+    addEventListenerToCard(card5Arr);
 
     function hover(){
         this.style.overflow = "visible";
@@ -57,4 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         this.style.overflow = "hidden";
         this.style.bottom = "10vh";
     }
+
+    // const card1Border = card1.
 });
