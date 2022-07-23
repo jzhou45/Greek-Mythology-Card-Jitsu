@@ -55,6 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function unhover(){
         this.style.overflow = "hidden";
-        this.style.bottom = "5.5vh";
+        this.style.bottom = "10vh";
     }
 });
