@@ -1,15 +1,18 @@
 .card-border{
     display: flex;
-    width: 180px;
-    height: 245px;
+    width: 11.9vw;
+    aspect-ratio: 36/49;
+    height: auto;
     background-color: lightblue;
     border-radius: 20px;
     z-index: 1;
+    margin: 20px;
 }
 
 .splash-art{
-    width: 162px;
-    height: 232.75px;
+    width: 10.7vw;
+    height: auto;
+    aspect-ratio: 36/49;
     border-radius: 20px;
     margin: auto;
     z-index: 2;
@@ -19,19 +22,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60px;
-    height: 70px;
+    width: 4vw;
+    height: auto;
+    aspect-ratio: 6/7;
     background-color: lightblue;
     border-radius: 20px;
     z-index: 3;
 }
 
 .icon{
-    width: 24px;
-    height: 26px;
-    padding-top: 10px;
+    width: 1.6vw;
+    height: auto;
+    aspect-ratio: 12/13;
+    padding-top: 2.5vh;
 }
 
 .power-num{
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
+}
+
+
+#hand{
+    display: flex;
+    position: absolute;
+
 }
