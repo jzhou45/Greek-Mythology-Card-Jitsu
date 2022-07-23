@@ -1,11 +1,13 @@
 import Deck from "./deck.js";
 import Hand from "./hand.js";
+import Board from "./board.js";
 
 function Game(deck){
     let hand = new Hand(deck);
     this.handClass = hand;
     this.hand = hand.hand;
     this.deck = hand.deck;
+    this.board = new Board(this.hand);
 }
 
 Game.prototype.start = function(){
@@ -48,5 +50,4 @@ Game.prototype.setCardValues = function(cardObj){
 
     powerValue.innerHTML = cardObj.card.value;
 }
-
 export default Game;

@@ -26,9 +26,15 @@ Hand.prototype.isMissingCard = function(){
 }
 
 Hand.prototype.findMissingCardIndex = function(){
-    for (let i of this.hand){
+    for (let i = 0; i < this.hand.length; i++){
         if (i === null) return i;
     }
+}
+
+Hand.prototype.playCard = function(index){
+    const playedCard = this.hand[index];
+    this.hand[index] = null;
+    return playedCard;
 }
 
 export default Hand;
