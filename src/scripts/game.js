@@ -32,10 +32,21 @@ Game.prototype.setCardValues = function(cardObj){
     let backgroundColor = document.getElementById(cardObj.id);
     let upperCorner = backgroundColor.children[0];
     let img = backgroundColor.children[1];
+    let icon = upperCorner.children[0];
+    let powerValue = upperCorner.children[1];
 
     backgroundColor.style.backgroundColor = cardObj.card.color;
     upperCorner.style.backgroundColor = cardObj.card.color;
     img.src = cardObj.card.img;
+    if (cardObj.card.type === "god"){
+        icon.src = "/src/assests/god.png";
+    } else if (cardObj.card.type === "monster"){
+        icon.src = "/src/assests/monster.png";
+    } else{
+        icon.src = "/src/assests/hero.png"
+    }
+
+    powerValue.innerHTML = cardObj.card.value;
 }
 
 export default Game;
