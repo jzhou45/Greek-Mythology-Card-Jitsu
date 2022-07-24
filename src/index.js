@@ -25,15 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const hydra = new Card("Hydra", "monster", "7", "#FDFD96", "/src/assests/hydra.webp");
     const chiron = new Card("Chiron", "monster", "5", "#FDFD96", "/src/assests/chiron.webp")
 
-    const hades = new Card("Hades", "god", "8", "#404040", "/src/assests/hades.jpeg");
-    const persephone = new Card("Persephone", "god", "5", "#404040", "/src/assests/persephone.jpeg");
-    const plutus = new Card("Plutus", "god", "2", "#404040", "/src/assests/plutus.jpeg");
-    const orpheus = new Card("Orpheus", "hero", "4", "#404040", "/src/assests/orpheus.webp");
-    const eurydice = new Card("Eurydice", "hero", "2", "#404040", "/src/assests/eurydice.jpg");
-    const er = new Card("Er", "hero", "1", "#404040", "/src/assests/er.jpeg");
-    const cereberus = new Card("Cereberus", "monster", "6", "#404040", "/src/assests/cereberus.webp");
-    const charon = new Card("Charon", "monster", "2", "#404040", "/src/assests/charon.jpeg");
-    const typhon = new Card("Typhon", "monster", "4", "#404040", "/src/assests/typhon.jpeg");
+    const hades = new Card("Hades", "god", "8", "#ABB0B8", "/src/assests/hades.jpeg");
+    const persephone = new Card("Persephone", "god", "5", "#ABB0B8", "/src/assests/persephone.jpeg");
+    const plutus = new Card("Plutus", "god", "2", "#ABB0B8", "/src/assests/plutus.jpeg");
+    const orpheus = new Card("Orpheus", "hero", "4", "#ABB0B8", "/src/assests/orpheus.webp");
+    const eurydice = new Card("Eurydice", "hero", "2", "#ABB0B8", "/src/assests/eurydice.jpg");
+    const er = new Card("Er", "hero", "1", "#ABB0B8", "/src/assests/er.jpeg");
+    const cereberus = new Card("Cereberus", "monster", "6", "#ABB0B8", "/src/assests/cereberus.webp");
+    const charon = new Card("Charon", "monster", "2", "#ABB0B8", "/src/assests/charon.jpeg");
+    const typhon = new Card("Typhon", "monster", "4", "#ABB0B8", "/src/assests/typhon.jpeg");
 
     var starterDeck = new Deck(
         poseidon, orion, theseus, bellerophon, triton, proteus, minotaur, pegasus, arion,
