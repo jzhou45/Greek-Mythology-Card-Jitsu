@@ -112,6 +112,56 @@ table {
     aspect-ratio: 280/71;
     background-color: gray;
 }
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/board.css ***!
+  \****************************************************************************************************/
+.board-card-border{
+    position: absolute;
+    display: none;
+    width: 9vw;
+    aspect-ratio: 36/49;
+    height: auto;
+    border-radius: 20px;
+    z-index: 1;
+    margin: 1.5vh;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.board-splash-art{
+    width: 8.25vw;
+    height: auto;
+    aspect-ratio: 36/49;
+    border-radius: 20px;
+    margin: auto;
+    z-index: 2;
+}
+.board-card-corner{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 3.5vw;
+    height: auto;
+    aspect-ratio: 6/7;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+.board-icon{
+    width: 1vw;
+    height: auto;
+    aspect-ratio: 12/13;
+    padding-top: 1.5vh;
+}
+
+.board-power-num{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/

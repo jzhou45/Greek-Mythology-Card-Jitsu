@@ -2,6 +2,7 @@ import Card from './scripts/card.js';
 import Deck from "./scripts/deck.js";
 import Hand from "./scripts/hand.js";
 import Game from "./scripts/game.js";
+import Board from "./scripts/board.js"
 
 document.addEventListener('DOMContentLoaded', () => {
     let zeus = new Card("Zeus", "god", "10", "#FDFD96", "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8932fa02-b339-4e8c-99d6-115e7cd29415/d1qn6k2-29220961-dc57-459b-ad1a-4015d7e6067b.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg5MzJmYTAyLWIzMzktNGU4Yy05OWQ2LTExNWU3Y2QyOTQxNVwvZDFxbjZrMi0yOTIyMDk2MS1kYzU3LTQ1OWItYWQxYS00MDE1ZDdlNjA2N2IuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Q5fKUiaddvfZlaLo42gTYWA0YbXxB-UahlYmE3xwSLI");
@@ -69,6 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function playCard(){
         this.style.display = "none";
-        console.log(this)
+        let index;
+        if (this.id === "card1"){
+            index = 0;
+        } else if (this.id === "card2"){
+            index = 1;
+        } else if (this.id === "card3"){
+            index = 2;
+        } else if (this.id === "card4"){
+            index = 3;
+        } else{
+            index = 4;
+        }
+        game.board.play(index);
     }
 });

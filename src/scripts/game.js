@@ -7,7 +7,7 @@ function Game(deck){
     this.handClass = hand;
     this.hand = hand.hand;
     this.deck = hand.deck;
-    this.board = new Board(this.hand);
+    this.board = new Board(hand);
 }
 
 Game.prototype.start = function(){
