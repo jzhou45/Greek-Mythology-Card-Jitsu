@@ -37,4 +37,18 @@ Hand.prototype.playCard = function(index){
     return playedCard;
 }
 
+Hand.prototype.whichCard = function(element){
+    if (element === "card1"){
+        return this.hand[0];
+    } else if (element === "card2"){
+        return this.hand[1];
+    } else if (element === "card3"){
+        return this.hand[2];
+    } else if (element === "card4"){
+        return this.hand[3];
+    } else{
+        return this.hand[4];
+    }
+}
+
 export default Hand;

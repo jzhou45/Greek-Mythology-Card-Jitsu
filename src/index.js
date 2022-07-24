@@ -68,11 +68,37 @@ document.addEventListener('DOMContentLoaded', () => {
     function hover(){
         this.style.overflow = "visible";
         this.style.bottom = "15vh";
+        displayCardName(this);
     }
 
     function unhover(){
         this.style.overflow = "hidden";
         this.style.bottom = "10vh";
+        undisplayCardName(this);
+    }
+
+    function setNamesLeft(cardName, cardsArr){
+        const name = document.getElementById(cardName);
+        name.style.left = cardsArr[1];
+    }
+
+    setNamesLeft("card1-name", card1Arr);
+    setNamesLeft("card2-name", card2Arr);
+    setNamesLeft("card3-name", card3Arr);
+    setNamesLeft("card4-name", card4Arr);
+    setNamesLeft("card5-name", card5Arr);
+
+    function displayCardName(element){
+        const cardId = element.id;
+        const cardIdString = String(cardId)
+        const card = game.handClass.whichCard(cardIdString);
+        const cardIdName = document.getElementById(`${cardIdString}-name`);
+        cardIdName.children[0].innerHTML = card.name;
+    }
+
+    function undisplayCardName(element){
+        const cardIdString = String(element.id);
+        document.getElementById(`${cardIdString}-name`).children[0].innerHTML = "";
     }
 
     function playCard(){

@@ -112,6 +112,20 @@ table {
     aspect-ratio: 280/71;
     background-color: gray;
 }
+
+.names{
+    display: flex;
+    position: absolute;
+    bottom: 15vh;
+}
+
+.card-name{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9vw;
+}
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/board.css ***!
   \****************************************************************************************************/
