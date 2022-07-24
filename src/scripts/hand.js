@@ -8,14 +8,53 @@ function Hand(){
 
 Hand.prototype.initialDraw = function(){
     for (let i = 0; i < 5; i++){
-        this.hand[i] = this.deck.draw();
+        this.hand[i] = this.draw();
     }
     return this.hand;
 }
 
+Hand.prototype.showDraw = function(index){
+    let card;
+    if (index === 0){
+        card = {card: this.hand[0], id: "card1"};
+    } else if (index === 1){
+        card = {card: this.hand[1], id: "card2"};
+    } else if (index === 2){
+        card = {card: this.hand[2], id: "card3"};
+    } else if (index === 3){
+        card = {card: this.hand[3], id: "card4"};
+    } else {
+        card = {card: this.hand[4], id: "card5"};
+    }
+    this.setCardValues(card);
+}
+
+Hand.prototype.setCardValues = function(cardObj){
+    let backgroundColor = document.getElementById(cardObj.id);
+    let upperCorner = backgroundColor.children[0];
+    let img = backgroundColor.children[1];
+    let icon = upperCorner.children[0];
+    let powerValue = upperCorner.children[1];
+
+    backgroundColor.style.backgroundColor = cardObj.card.color;
+    upperCorner.style.backgroundColor = cardObj.card.color;
+    img.src = cardObj.card.img;
+    if (cardObj.card.type === "god"){
+        icon.src = "src/assets/god.png";
+    } else if (cardObj.card.type === "monster"){
+        icon.src = "src/assets/monster.png";
+    } else{
+        icon.src = "src/assets/hero.png"
+    }
+
+    powerValue.innerHTML = cardObj.card.value;
+}
+
 Hand.prototype.draw = function(){
     const newCard = this.deck.draw();
-    this.hand[this.findMissingCardIndex()] = newCard;
+    const index = this.findMissingCardIndex();
+    this.hand[index] = newCard;
+    this.showDraw(index)
     return newCard;
 }
 

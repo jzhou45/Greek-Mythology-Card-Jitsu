@@ -1,14 +1,13 @@
-import Hand from "./hand.js"
-
-function Board(hand){
-    this.hand = hand;
+function Board(){
     this.board = null;
 }
 
-Board.prototype.play = function(index){
-    const playedCard = this.hand.playCard(index);
-    this.board = playedCard;
-    this.moveCardToBoard();
+Board.prototype.play = function(card){
+    this.board = card
+}
+
+Board.prototype.clear = function (){
+    this.board = null;
 }
 
 Board.prototype.moveCardToBoard = function(){
