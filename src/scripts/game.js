@@ -41,11 +41,11 @@ Game.prototype.setCardValues = function(cardObj){
     upperCorner.style.backgroundColor = cardObj.card.color;
     img.src = cardObj.card.img;
     if (cardObj.card.type === "god"){
-        icon.src = "/src/assets/god.png";
+        icon.src = "src/assets/god.png";
     } else if (cardObj.card.type === "monster"){
-        icon.src = "/src/assets/monster.png";
+        icon.src = "src/assets/monster.png";
     } else{
-        icon.src = "/src/assets/hero.png"
+        icon.src = "src/assets/hero.png"
     }
 
     powerValue.innerHTML = cardObj.card.value;
