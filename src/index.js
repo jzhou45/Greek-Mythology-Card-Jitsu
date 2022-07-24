@@ -45,6 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setCardPositions(card4Arr);
     setCardPositions(card5Arr);
 
+    function setBoardPositions(board){
+        board.style.left = (card1Arr[1] + card2Arr[1]) / 2
+    }
+
+    const playerBoard = document.getElementById("player-board");
+    setBoardPositions(playerBoard);
+
     function addEventListenerToCard(cardArr){
         const card = cardArr[0];
         card.addEventListener("mouseover", hover, false);

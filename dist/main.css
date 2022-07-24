@@ -122,8 +122,8 @@ table {
     aspect-ratio: 36/49;
     height: auto;
     border-radius: 20px;
+    bottom: 50vh;
     z-index: 1;
-    margin: 1.5vh;
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
 }
 
