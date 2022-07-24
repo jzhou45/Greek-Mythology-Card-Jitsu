@@ -49,7 +49,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     margin-left: 3.25vw;
     margin-right: auto;

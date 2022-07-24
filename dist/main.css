@@ -103,7 +103,7 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     margin-left: 3.25vw;
     margin-right: auto;
@@ -181,6 +181,14 @@ table {
 }
 
 
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/timer.css ***!
+  \****************************************************************************************************/
+#timer{
+    font-family: 'Caesar Dressing';
+    font-size: xx-large;
+    padding-bottom: 40vh;
+}
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
