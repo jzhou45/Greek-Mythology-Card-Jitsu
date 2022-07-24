@@ -24,11 +24,11 @@ Board.prototype.moveCardToBoard = function(){
     upperCorner.style.backgroundColor = this.board.color;
     img.src = this.board.img;
     if (this.board.type === "god"){
-        icon.src = "/src/assets/god.png";
+        icon.src = "src/assets/god.png";
     } else if (this.board.type === "monster"){
-        icon.src = "/src/assets/monster.png";
+        icon.src = "src/assets/monster.png";
     } else{
-        icon.src = "/src/assets/hero.png"
+        icon.src = "src/assets/hero.png"
     }
 
     powerValue.innerHTML = this.board.value;
