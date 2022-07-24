@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var starterDeck = new Deck(
         poseidon, orion, theseus, bellerophon, triton, proteus, minotaur, pegasus, arion,
         zeus, athena, aphrodite, heracles, achilles, helen, medusa, hydra, chiron,
-        hades, persephone, plutus, orpheus, eurydice, er, cereberus, charon
+        hades, persephone, plutus, orpheus, eurydice, er, cereberus, charon, typhon
     );
 
     var game = new Game(starterDeck);
