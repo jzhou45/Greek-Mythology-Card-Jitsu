@@ -1,9 +1,10 @@
+import Card from "./card.js";
 import Deck from "./deck.js";
 import Hand from "./hand.js";
 import Board from "./board.js";
 
-function Game(deck){
-    let hand = new Hand(deck);
+function Game(){
+    let hand = new Hand(starterDeck);
     this.handClass = hand;
     this.hand = hand.hand;
     this.deck = hand.deck;
@@ -50,4 +51,9 @@ Game.prototype.setCardValues = function(cardObj){
 
     powerValue.innerHTML = cardObj.card.value;
 }
+
+Game.prototype.round = function(){
+
+}
+
 export default Game;

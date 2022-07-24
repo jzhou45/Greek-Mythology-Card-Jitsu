@@ -1,8 +1,9 @@
-// import Deck from "./deck";
+import Deck from "./deck.js";
 
-function Hand(deck){
+function Hand(){
     this.hand = [null, null, null, null, null];
-    this.deck = deck;
+    this.deck = new Deck();
+    this.initialDraw()
 }
 
 Hand.prototype.initialDraw = function(){
@@ -18,6 +19,13 @@ Hand.prototype.draw = function(){
     return newCard;
 }
 
+
+Hand.prototype.playCard = function(index){
+    const playedCard = this.hand[index];
+    this.hand[index] = null;
+    return playedCard;
+}
+
 Hand.prototype.isMissingCard = function(){
     for (let i of this.hand){
         if (i === null) return false;
@@ -27,14 +35,8 @@ Hand.prototype.isMissingCard = function(){
 
 Hand.prototype.findMissingCardIndex = function(){
     for (let i = 0; i < this.hand.length; i++){
-        if (i === null) return i;
+        if (this.hand[i] === null) return i;
     }
-}
-
-Hand.prototype.playCard = function(index){
-    const playedCard = this.hand[index];
-    this.hand[index] = null;
-    return playedCard;
 }
 
 Hand.prototype.whichCard = function(element){
