@@ -15,7 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const pegasus = new Card("Pegasus", "monster", "10", "#A7C7E7", "/src/assests/pegasus.png");
     const arion = new Card("Arion", "monster", "1", "#A7C7E7", "/src/assests/arion.jpeg");
     
-    var starterDeck = new Deck(poseidon, orion, theseus, bellerophon, triton, proteus, minotaur, pegasus, arion);
+    const zeus = new Card("Zeus", "god", "10", "#FDFD96", "/src/assests/zeus.jpeg");
+    const athena = new Card("Athena", "god", "7", "#FDFD96", "/src/assests/athena.jpeg")
+    const aphrodite = new Card("Aphrodite", "god", "6", "#FDFD96", "/src/assests/aphrodite.webp");
+    const heracles = new Card("Heracles", "hero", "10", "#FDFD96", "/src/assests/heracles.webp");
+    const achilles = new Card("Achilles", "hero", "9", "#FDFD96", "/src/assests/achilles.jpeg");
+    const helen = new Card("Helen", "hero", "6", "#FDFD96", "/src/assests/helen.webp");
+    const medusa = new Card("Medusa", "monster", "8", "#FDFD96", "/src/assests/medusa.jpeg");
+    const hydra = new Card("Hydra", "monster", "7", "#FDFD96", "/src/assests/hydra.webp");
+    const chiron = new Card("Chiron", "monster", "5", "#FDFD96", "/src/assests/chiron.webp")
+
+    var starterDeck = new Deck(
+        poseidon, orion, theseus, bellerophon, triton, proteus, minotaur, pegasus, arion,
+        zeus, athena, aphrodite, heracles, achilles, helen, medusa, hydra, chiron);
 
     var game = new Game(starterDeck);
     game.start();
