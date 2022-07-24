@@ -39,8 +39,8 @@
 }
 
 .power-num{
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    font-family: 'Caesar Dressing';
+    margin-top: 0.5vh;
     font-size: 3vh;
     font-weight: bold;
 }
@@ -71,4 +71,9 @@
     justify-content: center;
     align-items: center;
     width: 9vw;
+}
+
+.card-name p{
+    font-family: 'Caesar Dressing';
+    font-size: x-large;
 }
