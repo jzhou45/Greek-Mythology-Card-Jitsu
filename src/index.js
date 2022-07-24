@@ -6,11 +6,11 @@ import Board from "./scripts/board.js"
 
 document.addEventListener('DOMContentLoaded', () => {
     const poseidon = new Card("Poseidon", "god", "9", "#A7C7E7", "/src/assests/poseidon.png");
-    const triton = new Card("Triton", "god", "5", "#A7C7E7", "/src/assests/triton.png");
+    const triton = new Card("Triton", "god", "4", "#A7C7E7", "/src/assests/triton.png");
     const proteus = new Card("Proteus", "god", "1", "#A7C7E7", "src/assests/proteus.jpeg");
-    const orion = new Card("Orion", "hero", "3", "#A7C7E7", "/src/assests/orion.jpeg");
+    const orion = new Card("Orion", "hero", "5", "#A7C7E7", "/src/assests/orion.jpeg");
     const theseus = new Card("Theseus", "hero", "7", "#A7C7E7", "/src/assests/theseus.webp");
-    const bellerophon = new Card("Bellerophon", "hero", "2", "#A7C7E7", "/src/assests/bellerophon.jpeg");
+    const bellerophon = new Card("Bellerophon", "hero", "3", "#A7C7E7", "/src/assests/bellerophon.jpeg");
     const minotaur = new Card("Minotaur", "monster", "9", "#A7C7E7", "/src/assests/minotaur.png");
     const pegasus = new Card("Pegasus", "monster", "10", "#A7C7E7", "/src/assests/pegasus.png");
     const arion = new Card("Arion", "monster", "1", "#A7C7E7", "/src/assests/arion.jpeg");
@@ -25,9 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const hydra = new Card("Hydra", "monster", "7", "#FDFD96", "/src/assests/hydra.webp");
     const chiron = new Card("Chiron", "monster", "5", "#FDFD96", "/src/assests/chiron.webp")
 
+    const hades = new Card("Hades", "god", "8", "#404040", "/src/assests/hades.jpeg");
+    const persephone = new Card("Persephone", "god", "5", "#404040", "/src/assests/persephone.jpeg");
+    const plutus = new Card("Plutus", "god", "2", "#404040", "/src/assests/plutus.jpeg");
+    const orpheus = new Card("Orpheus", "hero", "4", "#404040", "/src/assests/orpheus.webp");
+    const eurydice = new Card("Eurydice", "hero", "2", "#404040", "/src/assests/eurydice.jpg");
+    const er = new Card("Er", "hero", "1", "#404040", "/src/assests/er.jpeg");
+    const cereberus = new Card("Cereberus", "monster", "6", "#404040", "/src/assests/cereberus.webp");
+    const charon = new Card("Charon", "monster", "2", "#404040", "/src/assests/charon.jpeg");
+    const typhon = new Card("Typhon", "monster", "4", "#404040", "/src/assests/typhon.jpeg");
+
     var starterDeck = new Deck(
         poseidon, orion, theseus, bellerophon, triton, proteus, minotaur, pegasus, arion,
-        zeus, athena, aphrodite, heracles, achilles, helen, medusa, hydra, chiron);
+        zeus, athena, aphrodite, heracles, achilles, helen, medusa, hydra, chiron,
+        hades, persephone, plutus, orpheus, eurydice, er, cereberus, charon
+    );
 
     var game = new Game(starterDeck);
     game.start();
