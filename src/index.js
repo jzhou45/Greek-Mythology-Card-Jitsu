@@ -144,5 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
             index = 4;
         }
         game.board.play(index);
+        const newCard = game.handClass.draw();
+        game.setCardValues({id: this.id, card: newCard});
+        this.style.display = "flex";
     }
+
 });
