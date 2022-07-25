@@ -25,10 +25,15 @@ Game.prototype.countdown = function(){
     let timer = setInterval( function(){
         document.getElementById('timer').innerHTML=sec;
         sec--;
+        if (game.board.board){
+            clearInterval(timer);
+            game.ai.play();
+        }
         if (sec < 0){
         clearInterval(timer);
-        game.moveFromHandToBoard(0)};
+        game.moveFromHandToBoard(0);
         game.ai.play();
+        };
     }, 1000);
 }
 
