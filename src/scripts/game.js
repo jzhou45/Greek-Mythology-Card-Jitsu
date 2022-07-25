@@ -17,16 +17,15 @@ Game.prototype.moveFromHandToBoard = function(index){
 Game.prototype.start = function(){
 }
 
-Game.prototype.round = function(){
-
-}
-
 Game.prototype.countdown = function(){
     let sec = 20;
+    let game = this;
     let timer = setInterval( function(){
         document.getElementById('timer').innerHTML=sec;
         sec--;
-        if (sec < 0) clearInterval(timer);
+        if (sec < 0){
+        clearInterval(timer);
+        game.moveFromHandToBoard(0)};
     }, 1000);
 }
 
