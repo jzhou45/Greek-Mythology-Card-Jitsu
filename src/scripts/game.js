@@ -6,6 +6,8 @@ function Game(){
     this.hand = new Hand();
     this.board = new Board();
     this.ai = new AI();
+    this.playerTally = 0;
+    this.aiTally = 0;
     this.countdown();
 }
 
@@ -36,5 +38,36 @@ Game.prototype.countdown = function(){
         };
     }, 1000);
 }
+
+Game.prototype.winRound = function(){
+    const playerCard = this.board.board;
+    const aiCard = this.ai.board;
+    if (this.winByType(playerCard, aiCard)){
+        this.playerTally += 1;
+    }else{
+        this.aiTally += 1;
+    }
+}
+
+Game.prototype.winByType = function(playerCard, aiCard){
+    if (playerCard.type === aiCard.type){
+        return this.winByNumber(playerCard, aiCard);
+    } else if(playerCard.type === "monster" && aiCard.type === "god"){
+        return true;
+    } else if (playerCard.type === "god" && aiCard.type === "hero"){
+        return true;
+    } else if (playerCard.type === "hero" && aiCard.type === "monster"){
+        return true;
+    } else{
+        return false;
+    }
+}
+
+Game.prototype.winByNumber = function(playerCard, aiCard){
+    if (parseInt(playerCard.value) > parseInt(aiCard.value)) return true;
+    return false;
+}
+
+
 
 export default Game;
