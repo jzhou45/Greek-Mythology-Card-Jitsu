@@ -38,12 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
     setCardPositions(card4Arr);
     setCardPositions(card5Arr);
 
-    function setBoardPositions(board){
-        board.style.left = (card1Arr[1] + card2Arr[1]) / 2
+    function setBoardPositions(cardArr1, cardArr2, board){
+        board.style.left = (cardArr1 + cardArr2) / 2
     }
 
     const playerBoard = document.getElementById("player-board");
-    setBoardPositions(playerBoard);
+    setBoardPositions(card1Arr[1], card2Arr[1],playerBoard);
+
+    const aiBoard = document.getElementById("ai-board");
+    setBoardPositions(card4Arr[1], card5Arr[1], aiBoard);
 
     function addEventListenerToCard(cardArr){
         const card = cardArr[0];
