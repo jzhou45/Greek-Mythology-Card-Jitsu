@@ -1,0 +1,12 @@
+.points{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.points div{
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 5vh;
+}
