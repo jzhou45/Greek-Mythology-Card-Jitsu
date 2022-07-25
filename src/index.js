@@ -111,7 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } else{
             index = 4;
         }
-        game.moveFromHandToBoard(index);
+        if (game.board.board === null){
+            game.moveFromHandToBoard(index);
+        }
         this.style.display = "flex";
     }
 
