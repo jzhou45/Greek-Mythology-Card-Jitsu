@@ -30,11 +30,13 @@ Game.prototype.countdown = function(){
         if (game.board.board){
             clearInterval(timer);
             game.ai.play();
+            game.winRound();
         }
         if (sec < 0){
         clearInterval(timer);
         game.moveFromHandToBoard(0);
         game.ai.play();
+        game.winRound();
         };
     }, 1000);
 }
@@ -47,6 +49,7 @@ Game.prototype.winRound = function(){
     }else{
         this.aiTally += 1;
     }
+    this.visualizePoints();
 }
 
 Game.prototype.winByType = function(playerCard, aiCard){
@@ -66,6 +69,13 @@ Game.prototype.winByType = function(playerCard, aiCard){
 Game.prototype.winByNumber = function(playerCard, aiCard){
     if (parseInt(playerCard.value) > parseInt(aiCard.value)) return true;
     return false;
+}
+
+Game.prototype.visualizePoints = function(){
+    const playerPoints = document.getElementById("player-points");
+    const aiPoints = document.getElementById("ai-points");
+    playerPoints.innerHTML = this.playerTally;
+    aiPoints.innerHTML = this.aiTally;
 }
 
 
