@@ -1,9 +1,11 @@
 import Hand from "./hand.js";
 import Board from "./board.js";
+import AI from "./ai.js"
 
 function Game(){
     this.hand = new Hand();
     this.board = new Board();
+    this.ai = new AI();
     this.countdown();
 }
 
@@ -26,6 +28,7 @@ Game.prototype.countdown = function(){
         if (sec < 0){
         clearInterval(timer);
         game.moveFromHandToBoard(0)};
+        game.ai.play();
     }, 1000);
 }
 
