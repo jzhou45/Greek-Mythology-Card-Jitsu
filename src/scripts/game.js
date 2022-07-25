@@ -8,7 +8,6 @@ function Game(){
     this.ai = new AI();
     this.playerTally = 0;
     this.aiTally = 0;
-    this.countdown();
 }
 
 Game.prototype.moveFromHandToBoard = function(index){
@@ -19,10 +18,11 @@ Game.prototype.moveFromHandToBoard = function(index){
 }
 
 Game.prototype.start = function(){
+    this.countdown();
 }
 
 Game.prototype.countdown = function(){
-    let sec = 20;
+    let sec = 2;
     let game = this;
     let timer = setInterval( function(){
         document.getElementById('timer').innerHTML=sec;
