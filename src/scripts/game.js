@@ -1,13 +1,14 @@
 import Hand from "./hand.js";
 import Board from "./board.js";
-import AI from "./ai.js"
+import AI from "./ai.js";
+import Tally from "./tally.js";
 
 function Game(){
     this.hand = new Hand();
     this.board = new Board();
     this.ai = new AI();
-    this.playerTally = 0;
-    this.aiTally = 0;
+    this.playerTally = new Tally("user");
+    this.aiTally = new Tally("ai");
 }
 
 Game.prototype.moveFromHandToBoard = function(index){
@@ -22,10 +23,11 @@ Game.prototype.start = function(){
     game.countdown()
     let round = setInterval( function(){
         // debugger;
-        if (game.playerTally < 3 && timer.innerHTML === "0") {
+        if ((!game.playerTally.win() && !game.aiTally.win()) && timer.innerHTML === "0") {
             game.countdown();
-        } else if (game.playerTally === 3){
+        } else if (game.playerTally.win() || game.aiTally.win()){
             clearInterval(round);
+            alert("game ended");
         }
     }, 3000);
 }
@@ -60,9 +62,9 @@ Game.prototype.winRound = function(){
     const playerCard = this.board.board;
     const aiCard = this.ai.board;
     if (this.winByType(playerCard, aiCard)){
-        this.playerTally += 1;
-    }else{
-        this.aiTally += 1;
+        this.playerTally.points.push(playerCard);
+    }else {
+        this.aiTally.points.push(aiCard);
     }
     this.visualizePoints();
 }
@@ -89,8 +91,8 @@ Game.prototype.winByNumber = function(playerCard, aiCard){
 Game.prototype.visualizePoints = function(){
     const playerPoints = document.getElementById("player-points");
     const aiPoints = document.getElementById("ai-points");
-    playerPoints.innerHTML = this.playerTally;
-    aiPoints.innerHTML = this.aiTally;
+    playerPoints.innerHTML = JSON.stringify(this.playerTally.points);
+    aiPoints.innerHTML = JSON.stringify(this.aiTally.points);
 }
 
 
