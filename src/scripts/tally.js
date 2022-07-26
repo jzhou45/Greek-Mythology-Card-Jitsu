@@ -11,24 +11,24 @@ Tally.prototype.color = function(i){
     return this.points[i].color;
 }
 
-Tally.prototype.winTypes = function(){
-    let points = {"monster": 0, "god": 0, "hero": 0};
-    for (let i of this.points){
-        if (i.type === "monster"){
-            points["monster"]++;
-        } else if (i.type === "god"){
-            points["god"]++;
-        } else {
-            points["hero"]++
-        }
-        if (points.monster >= 1 && points.god >= 1 && points.hero >= 1){
-            return true;
-        }
-    }
-    return false;
-}
+// Tally.prototype.winTypes = function(){
+//     let points = {"monster": 0, "god": 0, "hero": 0};
+//     for (let i of this.points){
+//         if (i.type === "monster"){
+//             points["monster"]++;
+//         } else if (i.type === "god"){
+//             points["god"]++;
+//         } else {
+//             points["hero"]++
+//         }
+//         if (points.monster >= 1 && points.god >= 1 && points.hero >= 1){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 
-Tally.prototype.winColors = function(){
+Tally.prototype.win = function(){
     let points = {"monster": [], "god": [], "hero": []};
     for (let i of this.points){
         if (i.type === "monster" && !points.monster.includes(i.color)){
@@ -38,17 +38,25 @@ Tally.prototype.winColors = function(){
         } else if (i.type === "god" && !points.god.includes(i.color)){
             points["god"].push(i.color);
         }
-        if (points.monster >= 1 && points.god >= 1 && points.hero >= 1){
+        if (points.monster.length >= 3 || points.god.length >= 3 || points.hero.length >= 3){
             return true;
+        }
+        if (points.monster.length >= 1 && points.god.length >= 1 && points.hero.length >=1 && points.monster.concat(points.god.concat(points.hero)).filter(onlyUnique) >= 3){
+            return true
         }
     }
     return false;
 }
 
-Tally.prototype.win = function(){
-    if (this.winTypes()) return true;
-    if (this.winColors()) return true;
-    return false;
-}
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+  }
+
+
+// Tally.prototype.win = function(){
+//     // if (this.winTypes()) return true;
+//     if (this.winColors()) return true;
+//     return false;
+// }
 
 export default Tally;

@@ -91,10 +91,16 @@ Game.prototype.winByNumber = function(playerCard, aiCard){
 Game.prototype.visualizePoints = function(){
     const playerPoints = document.getElementById("player-points");
     const aiPoints = document.getElementById("ai-points");
-    playerPoints.innerHTML = JSON.stringify(this.playerTally.points);
-    aiPoints.innerHTML = JSON.stringify(this.aiTally.points);
+    playerPoints.innerHTML = JSON.stringify(displayPlease(this.playerTally.points));
+    aiPoints.innerHTML = JSON.stringify(displayPlease(this.aiTally.points));
 }
 
-
+function displayPlease(pointsArray){
+    let retVal = [];
+    for (let i of pointsArray){
+        retVal.push([i.type, i.color]);
+    }
+    return retVal;
+}
 
 export default Game;
