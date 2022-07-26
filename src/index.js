@@ -122,6 +122,42 @@ document.addEventListener('DOMContentLoaded', () => {
         this.style.display = "flex";
     }
 
-    game.start();
+    let gamediv = document.getElementById("game")
+    gamediv.style.visibility = "hidden";
+
+    let titlescreen = document.getElementById("title-div");
+    titlescreen.addEventListener("mouseover", enlarge, false);
+    titlescreen.addEventListener("mouseout", unenlarge, false);
+
+    function enlarge(){
+        const olympus = this.children[0]
+        const cardJitus = this.children[1]
+        olympus.style.fontSize = "32vh";
+        olympus.style.color = "#c6934b";
+        olympus.style.textShadow = "#703529 1vw 1vh";
+        cardJitus.style.fontSize = "32vh";
+        cardJitus.style.color = "#c6934b"
+        cardJitus.style.textShadow = "#703529 1vw 1vh";
+    }
+    
+    function unenlarge(){
+        const olympus = this.children[0]
+        const cardJitus = this.children[1]
+        olympus.style.fontSize = "30vh";
+        olympus.style.color = "#283d70";
+        olympus.style.textShadow = "#2e3546 1vw 1vh";
+        cardJitus.style.fontSize = "30vh";
+        cardJitus.style.color = "#283d70"
+        cardJitus.style.textShadow = "#2e3546 1vw 1vh";
+    }
+
+    titlescreen.addEventListener("click", startGame);
+    
+    function startGame(){
+        titlescreen.style.visibility = "hidden";
+        gamediv.style.visibility = "visible";
+        game.start();
+    }
+
 
 });
