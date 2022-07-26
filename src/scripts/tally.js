@@ -22,7 +22,7 @@ Tally.prototype.winTypes = function(){
             points["hero"]++
         }
         if (points.monster >= 1 && points.god >= 1 && points.hero >= 1){
-            return this.player;
+            return true;
         }
     }
     return false;
@@ -39,9 +39,14 @@ Tally.prototype.winColors = function(){
             points["god"].push(i.color);
         }
         if (points.monster >= 1 && points.god >= 1 && points.hero >= 1){
-            return this.player;
+            return true;
         }
     }
     return false;
 }
 
+Tally.prototype.win = function(){
+    if (this.winTypes()) return true;
+    if (this.winColors()) return true;
+    return false;
+}
