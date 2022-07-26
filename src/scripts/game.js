@@ -19,24 +19,21 @@ Game.prototype.moveFromHandToBoard = function(index){
 
 Game.prototype.start = function(){
     let game = this;
+    game.countdown()
     let round = setInterval( function(){
-        game.ai.clear;
-        game.board.clear;
-        // console.log(game.ai.board);
-        console.log(game.board.board);
-        let timer = document.getElementById('timer');
+        // debugger;
         if (game.playerTally < 3 && timer.innerHTML === "0") {
             game.countdown();
         } else if (game.playerTally === 3){
             clearInterval(round);
         }
-    }, 1000);
+    }, 3000);
 }
 
 Game.prototype.countdown = function(){
     this.board.board = null;
     this.ai.board = null;
-    let sec = 20;
+    let sec = 3;
     let game = this;
     let timer = setInterval( function(){
         document.getElementById('timer').innerHTML=sec;
