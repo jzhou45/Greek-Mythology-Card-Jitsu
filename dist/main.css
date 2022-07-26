@@ -110,7 +110,6 @@ table {
     width: 92.6vw;
     height: auto;
     aspect-ratio: 280/71;
-    background-color: gray;
 }
 
 .names{
@@ -185,6 +184,7 @@ table {
     justify-content: center;
     align-items: center;
     position: absolute;
+    top: 20vh;
 }
 
 .board-card-name{
@@ -197,7 +197,6 @@ table {
 .board-card-name p{
     font-family: 'Caesar Dressing';
     font-size: x-large;
-    margin-bottom: -33vh;
 }
 
 /*!****************************************************************************************************!*\
