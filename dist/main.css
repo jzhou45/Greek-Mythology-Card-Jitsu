@@ -243,6 +243,47 @@ table {
     color: #283d70;
     text-shadow: #2e3546 1vw 1vh;
 }
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css ***!
+  \***********************************************************************************************************/
+#instructions > div > img{
+    width: 3vw;
+    height: auto;
+}
+
+#instructions > img{
+    width: 10vw;
+    height: auto;
+}
+
+#instructions {
+    font-family: 'Caesar Dressing';
+    font-size: 3vh;
+    width: 35vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+}
+
+#instructions > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#instructions :last-child{
+    justify-content: right;
+    align-items: center;
+    margin-top: -1vh;
+    margin-right: -2vh;
+}
+
+.next p{
+    font-size: 10vh;
+    font-weight: bolder;
+    padding-left: 2vh;
+}
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
