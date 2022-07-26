@@ -42,10 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const playerBoard = document.getElementById("player-board");
-    setBoardPositions(card1Arr[1], card2Arr[1],playerBoard);
+    setBoardPositions(card1Arr[1], card2Arr[1], playerBoard);
 
     const aiBoard = document.getElementById("ai-board");
     setBoardPositions(card4Arr[1], card5Arr[1], aiBoard);
+
+    const playerBoardCard = document.getElementById("player-board-card");
+    setBoardPositions(card1Arr[1], card2Arr[1], playerBoardCard);
 
     function addEventListenerToCard(cardArr){
         const card = cardArr[0];

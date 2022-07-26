@@ -44,3 +44,22 @@
     font-weight: bold;
 }
 
+#player-board-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.board-card-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9vw;
+}
+
+.board-card-name p{
+    font-family: 'Caesar Dressing';
+    font-size: x-large;
+    margin-bottom: -33vh;
+}

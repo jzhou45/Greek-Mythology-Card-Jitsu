@@ -8,6 +8,7 @@ Board.prototype.play = function(card){
 
 Board.prototype.clear = function (){
     this.board = null;
+    this.undisplayCardName("player-board-name");
 }
 
 Board.prototype.moveCardToBoard = function(){
@@ -31,6 +32,17 @@ Board.prototype.moveCardToBoard = function(){
     }
 
     powerValue.innerHTML = this.board.value;
+    this.displayCardName("player-board-name");
+}
+
+Board.prototype.displayCardName = function(divElement){
+    const div = document.getElementById(divElement);
+    div.children[0].innerHTML = this.board.name;
+}
+
+Board.prototype.undisplayCardName = function(divElement){
+    const div = document.getElementById(divElement);
+    div.children[0].innerHTML = "";
 }
 
 export default Board;
