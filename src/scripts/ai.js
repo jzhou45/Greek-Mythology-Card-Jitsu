@@ -12,6 +12,7 @@ AI.prototype.play = function(){
 
 AI.prototype.clear = function(){
     this.board = null;
+    this.undisplayCardName("ai-board-name");
 }
 
 AI.prototype.moveCardToBoard = function(){
@@ -34,6 +35,17 @@ AI.prototype.moveCardToBoard = function(){
     }
 
     powerValue.innerHTML = this.board.value;
+    this.displayCardName("ai-board-name");
+}
+
+AI.prototype.displayCardName = function(divElement){
+    const div = document.getElementById(divElement);
+    div.children[0].innerHTML = this.board.name;
+}
+
+AI.prototype.undisplayCardName = function(divElement){
+    const div = document.getElementById(divElement);
+    div.children[0].innerHTML = "";
 }
 
 export default AI;

@@ -44,7 +44,7 @@
     font-weight: bold;
 }
 
-#player-board-card{
+#player-board-card, #ai-board-card{
     display: flex;
     justify-content: center;
     align-items: center;
