@@ -7,7 +7,6 @@ import Board from "./scripts/board.js"
 document.addEventListener('DOMContentLoaded', () => {
 
     var game = new Game();
-    game.start();
 
     function setLeft(card){
         const arr = [];
@@ -116,5 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         this.style.display = "flex";
     }
+
+    game.start();
 
 });

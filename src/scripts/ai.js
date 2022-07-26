@@ -10,6 +10,10 @@ AI.prototype.play = function(){
     this.moveCardToBoard();
 }
 
+AI.prototype.clear = function(){
+    this.board = null;
+}
+
 AI.prototype.moveCardToBoard = function(){
     let board = document.getElementById("ai-board")
     let upperCorner = board.children[0];

@@ -1,3 +1,6 @@
+/*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/css_reset.css ***!
+  \********************************************************************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -46,6 +49,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/card.css ***!
+  \***************************************************************************************************/
 .card-border{
     display: flex;
     width: 9vw;
@@ -125,6 +131,9 @@ table {
     font-family: 'Caesar Dressing';
     font-size: x-large;
 }
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/board.css ***!
+  \****************************************************************************************************/
 .board-card-border{
     position: absolute;
     display: none;
@@ -172,11 +181,17 @@ table {
 }
 
 
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/timer.css ***!
+  \****************************************************************************************************/
 #timer{
     font-family: 'Caesar Dressing';
     font-size: xx-large;
     padding-bottom: 40vh;
 }
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/points.css ***!
+  \*****************************************************************************************************/
 .points{
     display: flex;
     align-items: center;
@@ -189,6 +204,7 @@ table {
     margin-right: 15vw;
     margin-top: 5vh;
 }
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
 
-
-/*# sourceMappingURL=main.css.map*/

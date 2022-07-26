@@ -18,11 +18,25 @@ Game.prototype.moveFromHandToBoard = function(index){
 }
 
 Game.prototype.start = function(){
-    this.countdown();
+    let game = this;
+    let round = setInterval( function(){
+        game.ai.clear;
+        game.board.clear;
+        // console.log(game.ai.board);
+        console.log(game.board.board);
+        let timer = document.getElementById('timer');
+        if (game.playerTally < 3 && timer.innerHTML === "0") {
+            game.countdown();
+        } else if (game.playerTally === 3){
+            clearInterval(round);
+        }
+    }, 1000);
 }
 
 Game.prototype.countdown = function(){
-    let sec = 2;
+    this.board.board = null;
+    this.ai.board = null;
+    let sec = 20;
     let game = this;
     let timer = setInterval( function(){
         document.getElementById('timer').innerHTML=sec;
@@ -31,12 +45,16 @@ Game.prototype.countdown = function(){
             clearInterval(timer);
             game.ai.play();
             game.winRound();
+            document.getElementById('timer').innerHTML="0";
+            return;
         }
         if (sec < 0){
-        clearInterval(timer);
-        game.moveFromHandToBoard(0);
-        game.ai.play();
-        game.winRound();
+            clearInterval(timer);
+            game.moveFromHandToBoard(0);
+            game.ai.play();
+            game.winRound();
+            document.getElementById('timer').innerHTML="0";
+            return;
         };
     }, 1000);
 }
