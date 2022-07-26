@@ -64,6 +64,7 @@ Game.prototype.countdown = function(){
 Game.prototype.winRound = function(){
     const playerCard = this.board.board;
     const aiCard = this.ai.board;
+    if (this.winByType(playerCard, aiCard) === "tie") return;
     if (this.winByType(playerCard, aiCard)){
         this.playerTally.points.push(playerCard);
     }else {
@@ -87,8 +88,14 @@ Game.prototype.winByType = function(playerCard, aiCard){
 }
 
 Game.prototype.winByNumber = function(playerCard, aiCard){
-    if (parseInt(playerCard.value) > parseInt(aiCard.value)) return true;
-    return false;
+    if (parseInt(playerCard.value) > parseInt(aiCard.value)){
+        return true;
+    } else if (parseInt(playerCard.value < parseInt(aiCard.value))){
+        return false;
+    }
+    else{
+        return "tie";
+    }
 }
 
 Game.prototype.visualizePoints = function(){
