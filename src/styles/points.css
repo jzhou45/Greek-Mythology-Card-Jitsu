@@ -3,6 +3,8 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    top: 0px;
+    position: absolute;
 }
 
 .points div{
