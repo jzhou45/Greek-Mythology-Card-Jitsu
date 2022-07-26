@@ -33,10 +33,10 @@ const typhon = new Card("Typhon", "monster", "4", "#ABB0B8", "src/assets/typhon.
 const hera = new Card("Hera", "god", "9", "#F8C8DC", "src/assets/hera.webp");
 const ares = new Card("Ares", "god", "10", "#F8C8DC", "src/assets/ares.webp");
 const hephaestus = new Card("Hephaestus", "god", "2", "#F8C8DC", "src/assets/hephaestus.jpeg");
-const narcissus = new Card("Narcissus", "hero", "7", "#F8C8DC", "/src/assets/narcissus.webp");
+const narcissus = new Card("Narcissus", "hero", "7", "#F8C8DC", "src/assets/narcissus.webp");
 const paris = new Card("Paris", "hero", "6", "#F8C8DC", "src/assets/paris.jpeg");
 const jason = new Card("Jason", "hero", "4", "#F8C8DC", "src/assets/jason.jpeg");
-const echo = new Card("Echo", "monster", "7", "#F8C8DC", "/src/assets/echo.jpeg");
+const echo = new Card("Echo", "monster", "7", "#F8C8DC", "src/assets/echo.jpeg");
 const porphyrion = new Card("Porphyrion", "monster", "2", "#F8C8DC", "src/assets/porphyrion.webp");
 const echidna = new Card("Echidna", "monster", "3", "#F8C8DC", "src/assets/echidna.jpeg");
 

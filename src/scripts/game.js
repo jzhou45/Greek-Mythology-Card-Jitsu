@@ -30,7 +30,12 @@ Game.prototype.start = function(){
             }, 2000);
         } else if (game.playerTally.win() || game.aiTally.win()){
             clearInterval(round);
-            alert("game ended");
+            if (game.playerTally.win()){ 
+                alert("User has won");
+            } else{
+                alert("ai has won");
+            }
+
         }
     }, 3000);
 }
