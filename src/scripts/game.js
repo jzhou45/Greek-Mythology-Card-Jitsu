@@ -22,9 +22,12 @@ Game.prototype.start = function(){
     let game = this;
     game.countdown()
     let round = setInterval( function(){
-        // debugger;
         if ((!game.playerTally.win() && !game.aiTally.win()) && timer.innerHTML === "0") {
-            game.countdown();
+            setTimeout(function(){
+                game.board.clear();
+                game.ai.clear();
+                game.countdown();
+            }, 2000);
         } else if (game.playerTally.win() || game.aiTally.win()){
             clearInterval(round);
             alert("game ended");

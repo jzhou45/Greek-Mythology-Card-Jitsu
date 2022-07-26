@@ -9,6 +9,8 @@ Board.prototype.play = function(card){
 Board.prototype.clear = function (){
     this.board = null;
     this.undisplayCardName("player-board-name");
+    const board = document.getElementById("player-board");
+    board.style.display = "none";
 }
 
 Board.prototype.moveCardToBoard = function(){

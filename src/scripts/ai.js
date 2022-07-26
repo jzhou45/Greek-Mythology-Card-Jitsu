@@ -13,6 +13,8 @@ AI.prototype.play = function(){
 AI.prototype.clear = function(){
     this.board = null;
     this.undisplayCardName("ai-board-name");
+    const board = document.getElementById("ai-board");
+    board.style.display = "none";
 }
 
 AI.prototype.moveCardToBoard = function(){
