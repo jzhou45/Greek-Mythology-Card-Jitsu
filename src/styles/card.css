@@ -51,11 +51,37 @@
     align-items: center;
     position: fixed;
     bottom: 0;
-    margin-left: 3.25vw;
-    margin-right: auto;
-    width: 92.6vw;
-    height: auto;
+    width: 60vw;
+    height: 44vh;
     aspect-ratio: 280/71;
+    border: 1vh outset lightgray;
+    overflow: hidden;
+
+}
+
+.hand-background{
+    background: url("../src/assets/tile_background.png") repeat-x;
+    width: 5760px;
+    height: 1080px;
+    animation: slide 60s linear infinite;
+    position: absolute;
+    z-index: -10;
+}
+
+@keyframes slide{
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100%{
+        transform: translate3d(-1920px, 0, 0);
+    }
+}
+
+.center-hand{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
 }
 
 .names{
