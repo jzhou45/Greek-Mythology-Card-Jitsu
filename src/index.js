@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     instructions.style.display = "none";
 
     function startGame(){
-        instructions.style.visibility = "hidden";
+        instructions.style.display = "none";
         document.body.style.background = "url('src/assets/athena_temple.jpeg')";
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundRepeat = "no-repeat";
