@@ -108,7 +108,7 @@ table {
     width: 60vw;
     height: 44vh;
     aspect-ratio: 280/71;
-    border: 1vh outset lightgray;
+    border: 1vh outset #C0C0C0;
     overflow: hidden;
 
 }
@@ -120,6 +120,7 @@ table {
     animation: slide 60s linear infinite;
     position: absolute;
     z-index: -10;
+    opacity: 75%;
 }
 
 @keyframes slide{
@@ -135,7 +136,6 @@ table {
     display: flex;
     justify-content: center;
     overflow: hidden;
-
 }
 
 .names{
@@ -224,7 +224,6 @@ table {
     font-family: 'Caesar Dressing';
     font-size: x-large;
 }
-
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/timer.css ***!
   \****************************************************************************************************/
