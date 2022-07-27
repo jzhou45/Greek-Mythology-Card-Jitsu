@@ -172,4 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
         instructions.style.visibility = "visible";
     }
 
+    function nextHover(){
+        this.style.color = "#c6934b";
+    }
+
+    function nextUnhover(){
+        this.style.color = "black";
+    }
+
 });
