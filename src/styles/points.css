@@ -7,8 +7,32 @@
     position: absolute;
 }
 
-.points div{
+.points > div{
     margin-left: 15vw;
     margin-right: 15vw;
     margin-top: 5vh;
+}
+
+.tally{
+    width: 3vw;
+    height: auto;
+}
+
+.tally img{
+    height: 100%;
+    width: auto;
+}
+
+#player-points{
+    display: flex;
+    flex-direction: row;
+    width: 3vw
+}
+
+#player-points div div{
+    display: flex;
+    flex-direction: column;
+    padding: 1vh;
+    border-radius: 20px;
+    margin-top: -5vh;
 }

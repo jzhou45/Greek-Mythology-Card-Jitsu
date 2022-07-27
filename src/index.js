@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     next.addEventListener("mouseover", nextHover);
     next.addEventListener("mouseout", nextUnhover);
 
-    instructions.style.visibility = "hidden";
+    instructions.style.display = "none";
 
     function startGame(){
         instructions.style.visibility = "hidden";
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function goToInstructions(){
         titlescreen.style.display = "none";
-        instructions.style.visibility = "visible";
+        instructions.style.display = "flex";
     }
 
     function nextHover(){

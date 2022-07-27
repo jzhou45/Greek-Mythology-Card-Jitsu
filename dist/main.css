@@ -219,10 +219,34 @@ table {
     position: absolute;
 }
 
-.points div{
+.points > div{
     margin-left: 15vw;
     margin-right: 15vw;
     margin-top: 5vh;
+}
+
+.tally{
+    width: 3vw;
+    height: auto;
+}
+
+.tally img{
+    height: 100%;
+    width: auto;
+}
+
+#player-points{
+    display: flex;
+    flex-direction: row;
+    width: 3vw
+}
+
+#player-points div div{
+    display: flex;
+    flex-direction: column;
+    padding: 1vh;
+    border-radius: 20px;
+    margin-top: -5vh;
 }
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/title.css ***!
@@ -264,6 +288,8 @@ table {
     margin-left: auto;
     margin-right: auto;
     margin-top: 15vh;
+    flex-direction: column;
+    align-items: center;
 }
 
 #instructions > div{
@@ -272,11 +298,8 @@ table {
     justify-content: center;
 }
 
-#instructions :last-child{
-    justify-content: right;
-    align-items: center;
-    margin-top: -1vh;
-    margin-right: -2vh;
+.next{
+    margin-right: -60vh;
 }
 
 .next p{

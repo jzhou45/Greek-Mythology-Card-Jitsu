@@ -72,10 +72,11 @@ Game.prototype.winRound = function(){
     if (this.winByType(playerCard, aiCard) === "tie") return;
     if (this.winByType(playerCard, aiCard)){
         this.playerTally.points.push(playerCard);
+        this.visualizePoints("player", playerCard);
     }else {
         this.aiTally.points.push(aiCard);
+        this.visualizePoints("ai", aiCard);
     }
-    this.visualizePoints();
 }
 
 Game.prototype.winByType = function(playerCard, aiCard){
@@ -103,11 +104,37 @@ Game.prototype.winByNumber = function(playerCard, aiCard){
     }
 }
 
-Game.prototype.visualizePoints = function(){
-    const playerPoints = document.getElementById("player-points");
-    const aiPoints = document.getElementById("ai-points");
-    playerPoints.innerHTML = JSON.stringify(displayPlease(this.playerTally.points));
-    aiPoints.innerHTML = JSON.stringify(displayPlease(this.aiTally.points));
+Game.prototype.visualizePoints = function(who, card){
+    if (who === "player"){
+        if (card.type === "god"){
+            let godPoints = document.getElementById("player-god");
+            let div = document.createElement('div');
+            div.classList.add("tally");
+            div.style.backgroundColor = card.color;
+            let img = document.createElement('img');
+            img.src = "src/assets/god.png";
+            div.appendChild(img);
+            godPoints.appendChild(div);
+        } else if (card.type === "monster"){
+            let monsterPoints = document.getElementById("player-monster");
+            let div = document.createElement('div');
+            div.classList.add("tally");
+            div.style.backgroundColor = card.color;
+            let img = document.createElement('img');
+            img.src = "src/assets/monster.png";
+            div.appendChild(img);
+            monsterPoints.appendChild(div);
+        } else{
+            let heroPoints = document.getElementById("player-hero");
+            let div = document.createElement('div');
+            div.classList.add("tally");
+            div.style.backgroundColor = card.color;
+            let img = document.createElement('img');
+            img.src = "src/assets/hero.png";
+            div.appendChild(img);
+            heroPoints.appendChild(div);
+        }
+    }
 }
 
 function displayPlease(pointsArray){

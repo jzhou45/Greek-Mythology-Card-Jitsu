@@ -16,6 +16,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 15vh;
+    flex-direction: column;
+    align-items: center;
 }
 
 #instructions > div{
@@ -24,11 +26,8 @@
     justify-content: center;
 }
 
-#instructions :last-child{
-    justify-content: right;
-    align-items: center;
-    margin-top: -1vh;
-    margin-right: -2vh;
+.next{
+    margin-right: -60vh;
 }
 
 .next p{
