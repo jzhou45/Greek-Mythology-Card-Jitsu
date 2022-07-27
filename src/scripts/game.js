@@ -37,7 +37,7 @@ Game.prototype.start = function(){
             }
 
         }
-    }, 3000);
+    }, 3500);
 }
 
 Game.prototype.countdown = function(){
@@ -77,6 +77,7 @@ Game.prototype.winRound = function(){
         this.aiTally.points.push(aiCard);
         this.visualizePoints("ai", aiCard);
     }
+    return;
 }
 
 Game.prototype.winByType = function(playerCard, aiCard){
@@ -115,6 +116,7 @@ Game.prototype.visualizePoints = function(who, card){
             img.src = "src/assets/god.png";
             div.appendChild(img);
             godPoints.appendChild(div);
+            return;
         } else if (card.type === "monster"){
             let monsterPoints = document.getElementById("player-monster");
             let div = document.createElement('div');
@@ -124,6 +126,7 @@ Game.prototype.visualizePoints = function(who, card){
             img.src = "src/assets/monster.png";
             div.appendChild(img);
             monsterPoints.appendChild(div);
+            return;
         } else{
             let heroPoints = document.getElementById("player-hero");
             let div = document.createElement('div');
@@ -133,6 +136,7 @@ Game.prototype.visualizePoints = function(who, card){
             img.src = "src/assets/hero.png";
             div.appendChild(img);
             heroPoints.appendChild(div);
+            return;
         }
     } else{
         if (card.type === "god"){
@@ -144,6 +148,9 @@ Game.prototype.visualizePoints = function(who, card){
             img.src = "src/assets/god.png";
             div.appendChild(img);
             godPoints.appendChild(div);
+            
+            console.log(this.aiTally.points);
+            return;
         } else if (card.type === "monster"){
             let monsterPoints = document.getElementById("ai-monster");
             let div = document.createElement('div');
@@ -153,6 +160,7 @@ Game.prototype.visualizePoints = function(who, card){
             img.src = "src/assets/monster.png";
             div.appendChild(img);
             monsterPoints.appendChild(div);
+            return;
         } else{
             let heroPoints = document.getElementById("ai-hero");
             let div = document.createElement('div');
@@ -162,16 +170,10 @@ Game.prototype.visualizePoints = function(who, card){
             img.src = "src/assets/hero.png";
             div.appendChild(img);
             heroPoints.appendChild(div);
+            return;
         }
     }
 }
 
-function displayPlease(pointsArray){
-    let retVal = [];
-    for (let i of pointsArray){
-        retVal.push([i.type, i.color]);
-    }
-    return retVal;
-}
 
 export default Game;
