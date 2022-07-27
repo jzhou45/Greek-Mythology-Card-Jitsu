@@ -24,13 +24,13 @@
     width: auto;
 }
 
-#player-points{
+#player-points, #ai-points{
     display: flex;
     flex-direction: row;
     width: 3vw;
 }
 
-#player-points div div{
+#player-points div div, #ai-points div div{
     display: flex;
     flex-direction: column;
     padding: 1vh;

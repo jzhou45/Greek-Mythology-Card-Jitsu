@@ -135,7 +135,34 @@ Game.prototype.visualizePoints = function(who, card){
             heroPoints.appendChild(div);
         }
     } else{
-        
+        if (card.type === "god"){
+            let godPoints = document.getElementById("ai-god");
+            let div = document.createElement('div');
+            div.classList.add("tally");
+            div.style.background = card.color;
+            let img = document.createElement('img');
+            img.src = "src/assets/god.png";
+            div.appendChild(img);
+            godPoints.appendChild(div);
+        } else if (card.type === "monster"){
+            let monsterPoints = document.getElementById("ai-monster");
+            let div = document.createElement('div');
+            div.classList.add("tally");
+            div.style.background = card.color;
+            let img = document.createElement('img');
+            img.src = "src/assets/monster.png";
+            div.appendChild(img);
+            monsterPoints.appendChild(div);
+        } else{
+            let heroPoints = document.getElementById("ai-hero");
+            let div = document.createElement('div');
+            div.classList.add("tally");
+            div.style.background = card.color;
+            let img = document.createElement('img');
+            img.src = "src/assets/hero.png";
+            div.appendChild(img);
+            heroPoints.appendChild(div);
+        }
     }
 }
 
