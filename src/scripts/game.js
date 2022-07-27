@@ -148,8 +148,6 @@ Game.prototype.visualizePoints = function(who, card){
             img.src = "src/assets/god.png";
             div.appendChild(img);
             godPoints.appendChild(div);
-            
-            console.log(this.aiTally.points);
             return;
         } else if (card.type === "monster"){
             let monsterPoints = document.getElementById("ai-monster");
