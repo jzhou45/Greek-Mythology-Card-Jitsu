@@ -250,6 +250,8 @@ table {
     margin-top: -5vh;
     border: 1px solid black;
     position: relative;
+    margin-left: 0.25vw;
+    margin-right: 0.25vw;
 }
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/title.css ***!
@@ -278,7 +280,7 @@ table {
     height: auto;
 }
 
-#instructions > img{
+.instructions-triangle{
     width: 10vw;
     height: auto;
 }
@@ -290,7 +292,6 @@ table {
 }
 
 #instructions-block:hover{
-    /* cursor: s-resize; */
     cursor: url("../src/assets/cursor.png"), auto;
 }
 
@@ -323,6 +324,11 @@ table {
     font-size: 10vh;
     font-weight: bolder;
     padding-left: 2vh;
+}
+
+.instructions-num-example{
+    height: 30vh;
+    width: auto;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

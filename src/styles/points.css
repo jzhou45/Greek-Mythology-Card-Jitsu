@@ -38,4 +38,6 @@
     margin-top: -5vh;
     border: 1px solid black;
     position: relative;
+    margin-left: 0.25vw;
+    margin-right: 0.25vw;
 }
