@@ -151,13 +151,25 @@ document.addEventListener('DOMContentLoaded', () => {
         cardJitus.style.textShadow = "#2e3546 1vw 1vh";
     }
 
-    titlescreen.addEventListener("click", startGame);
+    titlescreen.addEventListener("click", goToInstructions);
     
+    const instructions = document.getElementById("instructions");
+    const next = document.getElementById("next");
+    next.addEventListener("click", startGame);
+    next.addEventListener("mouseover", nextHover);
+    next.addEventListener("mouseout", nextUnhover);
+
+    instructions.style.visibility = "hidden";
+
     function startGame(){
-        titlescreen.style.visibility = "hidden";
+        instructions.style.visibility = "hidden";
         gamediv.style.visibility = "visible";
         game.start();
     }
-
+    
+    function goToInstructions(){
+        titlescreen.style.display = "none";
+        instructions.style.visibility = "visible";
+    }
 
 });
