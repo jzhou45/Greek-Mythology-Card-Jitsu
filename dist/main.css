@@ -217,6 +217,7 @@ table {
     justify-content: space-between;
     top: 0px;
     position: absolute;
+    margin-top: 5vh;
 }
 
 .points > div{
@@ -238,7 +239,7 @@ table {
 #player-points{
     display: flex;
     flex-direction: row;
-    width: 3vw
+    width: 3vw;
 }
 
 #player-points div div{
@@ -247,6 +248,8 @@ table {
     padding: 1vh;
     border-radius: 20px;
     margin-top: -5vh;
+    border: 1px solid black;
+    position: relative;
 }
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/title.css ***!

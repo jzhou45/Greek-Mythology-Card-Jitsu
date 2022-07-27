@@ -110,7 +110,7 @@ Game.prototype.visualizePoints = function(who, card){
             let godPoints = document.getElementById("player-god");
             let div = document.createElement('div');
             div.classList.add("tally");
-            div.style.backgroundColor = card.color;
+            div.style.background = card.color;
             let img = document.createElement('img');
             img.src = "src/assets/god.png";
             div.appendChild(img);
@@ -119,7 +119,7 @@ Game.prototype.visualizePoints = function(who, card){
             let monsterPoints = document.getElementById("player-monster");
             let div = document.createElement('div');
             div.classList.add("tally");
-            div.style.backgroundColor = card.color;
+            div.style.background = card.color;
             let img = document.createElement('img');
             img.src = "src/assets/monster.png";
             div.appendChild(img);
@@ -128,12 +128,14 @@ Game.prototype.visualizePoints = function(who, card){
             let heroPoints = document.getElementById("player-hero");
             let div = document.createElement('div');
             div.classList.add("tally");
-            div.style.backgroundColor = card.color;
+            div.style.background = card.color;
             let img = document.createElement('img');
             img.src = "src/assets/hero.png";
             div.appendChild(img);
             heroPoints.appendChild(div);
         }
+    } else{
+        
     }
 }
 
