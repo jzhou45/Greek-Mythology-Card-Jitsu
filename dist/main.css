@@ -117,7 +117,7 @@ table {
     background: url("../src/assets/tile_background.png") repeat-x;
     width: 5760px;
     height: 1080px;
-    animation: slide 60s linear infinite;
+    animation: slide 120s linear infinite;
     position: absolute;
     z-index: -10;
     opacity: 75%;
@@ -272,11 +272,12 @@ table {
     flex-direction: column;
     padding: 1vh;
     border-radius: 20px;
-    margin-top: -5vh;
+    margin-top: -7.5vh;
     border: 1px solid black;
     position: relative;
     margin-left: 0.25vw;
     margin-right: 0.25vw;
+    box-shadow: 0.25vw 0.5vh;
 }
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/title.css ***!
