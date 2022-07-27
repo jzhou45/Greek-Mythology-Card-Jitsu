@@ -155,7 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     titlescreen.addEventListener("click", goToInstructions);
     
-    const instructions = document.getElementById("instructions");
+    const instructions = document.getElementById("instructions-block");
+
     const next = document.getElementById("next");
     next.addEventListener("click", startGame);
     next.addEventListener("mouseover", nextHover);

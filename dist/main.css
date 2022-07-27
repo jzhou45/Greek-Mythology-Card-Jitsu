@@ -283,10 +283,24 @@ table {
     height: auto;
 }
 
+#instructions-block{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: scroll;
+}
+
+#instructions-block:hover{
+    /* cursor: s-resize; */
+    cursor: url("../src/assets/cursor.png"), auto;
+}
+
+#instructions-block::-webkit-scrollbar { display: none; }
+
 #instructions {
     font-family: 'Caesar Dressing';
     font-size: 3vh;
     width: 35vw;
+    height: 60vh;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
