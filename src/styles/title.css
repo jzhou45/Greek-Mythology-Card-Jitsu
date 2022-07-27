@@ -5,12 +5,35 @@
     width: auto;
     height: auto;
     flex-direction: column;
+    font-family: 'Caesar Dressing';
     margin-top: 20vh;
 }
 
 .title-screen{
-    font-family: 'Caesar Dressing';
     font-size: 30vh;
     color: #283d70;
     text-shadow: #2e3546 1vw 1vh;
+}
+
+.click-to-start{
+    margin: 5vh;
+    font-size: 3vh;
+    animation: blinkingText 2s 1;
+    color: #ee9591;
+    text-shadow: #6E2622 0.1vw 0.3vh;
+}
+
+@keyframes blinkingText{
+    0%{
+        color: white;
+        text-shadow: none;
+    }
+    100%{
+        color: #ee9591;
+        text-shadow: #6E2622 0.1vw 0.3vh;
+    }
+}
+
+.me:hover{
+    color: #96ae8e;
 }
