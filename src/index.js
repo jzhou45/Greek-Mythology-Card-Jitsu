@@ -131,13 +131,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function enlarge(){
         const olympus = this.children[0]
-        const cardJitus = this.children[1]
+        const cardJitsu = this.children[1]
         olympus.style.fontSize = "32vh";
         olympus.style.color = "#c6934b";
         olympus.style.textShadow = "#703529 1vw 1vh";
-        cardJitus.style.fontSize = "32vh";
-        cardJitus.style.color = "#c6934b"
-        cardJitus.style.textShadow = "#703529 1vw 1vh";
+        olympus.style.cursor = "pointer";
+        cardJitsu.style.fontSize = "32vh";
+        cardJitsu.style.color = "#c6934b"
+        cardJitsu.style.textShadow = "#703529 1vw 1vh";
+        cardJitsu.style.cursor = "pointer";
     }
     
     function unenlarge(){
@@ -174,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function nextHover(){
         this.style.color = "#c6934b";
+        this.style.cursor = "pointer";
     }
 
     function nextUnhover(){
