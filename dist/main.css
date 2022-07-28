@@ -370,26 +370,26 @@ table {
 /*!*****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/volume.css ***!
   \*****************************************************************************************************/
-#volume img{
-    width: 3.5vw;
-    height: auto;
-    opacity: 65%;
-    padding: 0.5vw;
-}
-
 #volume{
     position: absolute;
     border-radius: 5px;
     border: 2px solid black;
     background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5em;
+    height: 3.5em;
+    opacity: 50%;
 }
 
-.volume-and-instructions{
+#volume-and-instructions{
+    position: absolute;
+    top: 4vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: sticky;
     width: 100%;
+    z-index: 9999999999;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

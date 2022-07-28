@@ -167,19 +167,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const battleMusic = document.querySelector("#battle-song");
     
-    const volume = document.getElementById("volume");
-    let musicIsPlaying = true;
+    const volumeAndInstructions = document.getElementById("volume-and-instructions");
+    const volume = document.querySelector("#volume");
     volume.addEventListener("click", playOrPause);
 
+    volumeAndInstructions.style.display = "none";
+
+    let musicIsPlaying = true;
 
     function playOrPause(){
         if (musicIsPlaying){
             musicIsPlaying = false;
             battleMusic.pause();
             battleMusic.currentTime = 0;
+            volume.children[0].outerHTML = "<i class='fa-solid fa-volume-xmark fa-2xl'></i>";
         } else{
             musicIsPlaying = true;
             battleMusic.play();
+            volume.children[0].outerHTML = "<i class='fa-solid fa-volume-high fa-2xl'></i>";
         }
     }
 
@@ -191,7 +196,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundRepeat = "no-repeat";
         gamediv.style.visibility = "visible";
-        game.start();
+        game.start();  
+        volumeAndInstructions.style.display = "flex";
         battleMusic.play();
     }
     

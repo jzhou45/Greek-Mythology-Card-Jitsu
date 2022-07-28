@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caesar%20Dressing">
+    <script src="https://kit.fontawesome.com/537ff7e000.js" crossorigin="anonymous"></script>
     <script src="./dist/main.js"></script>
     <title>Olympus Card-Jitsu</title>
   </head>
@@ -18,7 +19,6 @@
       <p class="me">Made by Jonathan Zhou</p>
     </div>
     <div id="instructions-block">
-      <div id="cursor"></div>
       <div id="instructions">
         <p>Olympus Card-Jitsu is a card game where every card has a class, a power value, and a color.</p>
         <p>Each card either has a type of:</p>
@@ -54,15 +54,16 @@
       </div>
     </div>
 
-    <div id="game">
-      <div class="volume-and-instructions">
-        <div id="volume">
-          <div>
-            <img src="src/assets/volume.png">
-          </div>
-        </div>
-        <div id="instructions"></div>
+    <div id="volume-and-instructions">
+      <div id="volume">
+        <i class="fa-solid fa-volume-high fa-2xl"></i>
       </div>
+      <div id="instructions-in-game">
+        <img src="">
+      </div>
+    </div>
+
+    <div id="game">
 
       <div class="points">
         <div id="player-points">
