@@ -168,8 +168,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const battleMusic = document.querySelector("#battle-song");
     
     const volume = document.getElementById("volume");
-    volume.addEventListener("click", playOrPause);
     let musicIsPlaying = true;
+    volume.addEventListener("click", playOrPause);
 
 
     function playOrPause(){
@@ -192,11 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.backgroundRepeat = "no-repeat";
         gamediv.style.visibility = "visible";
         game.start();
-        const sound = document.getElementById("volume");
-        const img = document.createElement("img");
-        img.src = "src/assets/volume.png";
-        sound.appendChild(img);
-        battleMusic.play();
     }
     
     function goToInstructions(){

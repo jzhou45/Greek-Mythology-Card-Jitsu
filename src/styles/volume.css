@@ -1,0 +1,21 @@
+#volume img{
+    width: 3.5vw;
+    height: auto;
+    opacity: 65%;
+    padding: 0.5vw;
+}
+
+#volume{
+    position: absolute;
+    border-radius: 5px;
+    border: 2px solid black;
+    background: white;
+}
+
+.volume-and-instructions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+}
