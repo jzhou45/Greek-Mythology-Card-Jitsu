@@ -240,6 +240,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     instructions.style.display = "none";
 
+    const github = document.getElementById("github");
+    const linkedin = document.getElementById("linkedin");
+    linkedin.addEventListener("mouseover", linksHover);
+    linkedin.addEventListener("click", goToLinkedIn);
+    github.addEventListener("mouseover", linksHover);
+    github.addEventListener("click", goToGithub);
+
+    function linksHover(){
+        this.style.cursor = "pointer";
+    }
+
+    function goToGithub(){
+        window.open("https://github.com/jzhou45", "_blank");
+    }
+
+    function goToLinkedIn(){
+        window.open("linkedin.com/in/jonathanzhou77/", "_blank");
+    }
+
     function startGame(){
         instructions.style.display = "none";
         document.body.style.background = "url('src/assets/athena_temple.jpeg')";
