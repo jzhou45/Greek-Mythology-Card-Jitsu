@@ -31,7 +31,17 @@ Game.prototype.start = function(){
             }, 2000);
         } else if (game.playerTally.win() || game.aiTally.win()){
             clearInterval(round);
-            document.getElementById("endscreen").style.display = "flex";
+            let winner;
+            if (game.playerTally.win()){
+                winner = "You Have Won";
+            } else{
+                winner = "You Have Lost";
+            }
+            const p = document.createElement("p");
+            p.innerHTML = winner;
+            const endscreen = document.getElementById("endscreen")
+            endscreen.children[0].insertBefore(p, endscreen.children[0].firstChild)
+            endscreen.style.display = "flex";
         }
     }, 3500);
 }
