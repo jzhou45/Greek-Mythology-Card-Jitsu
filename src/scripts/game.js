@@ -26,6 +26,7 @@ Game.prototype.start = function(){
                 game.board.clear();
                 game.ai.clear();
                 game.hand.draw();
+                document.getElementById("card1").style.display = "flex";
                 game.countdown();
             }, 2000);
         } else if (game.playerTally.win() || game.aiTally.win()){
@@ -58,6 +59,7 @@ Game.prototype.countdown = function(){
         if (sec < 0){
             clearInterval(timer);
             game.moveFromHandToBoard(0);
+            document.getElementById("card1").style.display = "none";
             game.ai.play();
             game.winRound();
             document.getElementById('timer').innerHTML="0";
