@@ -6,6 +6,9 @@
     height: auto;
     flex-direction: column;
     font-family: 'Caesar Dressing';
+}
+
+.title-screen:first-child{
     margin-top: 20vh;
 }
 

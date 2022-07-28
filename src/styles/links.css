@@ -1,0 +1,9 @@
+header{
+    position: absolute;
+    right: 2vh;
+    display: inline-block
+}
+
+header div{
+    margin-top: 7vh;
+}

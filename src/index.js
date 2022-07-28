@@ -247,6 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.backgroundRepeat = "no-repeat";
         gamediv.style.visibility = "visible";
         game.start();  
+        document.getElementsByTagName("header")[0].style.filter = "grayscale(1) invert(1)";
         volumeAndInstructions.style.display = "flex";
         battleMusic.play();
     }
