@@ -12,6 +12,8 @@ Each round of Card-Jitsu, would require each player to play 1 card at the same t
 After each round ends, the player would collect a token with the type and color of the card they won with. In order to win the game, a player would need to collect 3 tokens are different types or 3 tokens of the same type with different colors.
 
 ### Olympus Card-Jitsu
+Olympus Card-Jitsu combines an agglomeration of favorite things from my childhood, including Club Penguin, ninjas (which inspired the original Card-Jitsu), and Greek myths and the Percy Jackson series.
+
 Olympus Card-Jitsu aims to make a faithful adapatation to the core Card-Jitsu gameplay with new classes and cards based on Greek mythology and lore. In order to keep the game a client-side project, the opponenet will be a simple A.I., rather than an opposing player.
 
 ## Wireframe
@@ -20,34 +22,32 @@ The wireframe above displays the framework of the core game screen where:
   * Users are able to view their hand and remaining time on the bottom of the screen.
   * When time runs or when user and A.I. has chosen their cards, they will both display on the board, represented by user sprites in the above wireframe.
   * The top left represents all the cards the user has won with in the form of tokens or sprites, whereas the top right represents the A.I.'s.
+  * The top center section contains buttons to open a modal of information along with sound settings.
 
 
 ## Functionality & MVPs
-In Olympus Card-Jitsu, players will be able to:
-  * Select against 2 different A.I. opponents
-  * Start new games with a shuffled deck
-  * Select and play cards from their hand
-  * See the current game state and points of both player and A.I.
-  
-In addition, this project will include:
-  * Instructions on type matchups and rules of the game
-  * Audio and visual cues to the end of rounds and games
-  * Background music
+In Olympus Card-Jitsu, users will be able to:
+  * Interact with different aspects and element on the page for animations.
+  * Start games with a shuffled deck.
+  * Hover over cards for more information.
+  * Play cards onto the board.
+  * Have cards be played for them, if timer runs out or player is away from keyboard.
+  * Restart game.
+
+In addition, this project includes:
+  * Instructions and in-game modals for instructions if player forgets.
+  * Music and sound effects.
   
 
 ## Technologies, Libraries, APIs
-Olympus Card-Jitsu will be made with Vanilla JavaScript through DOM Manipulation.
+This project will is implemented with the following technologies:
+  * Game functions and user interactions are handled with Vanilla JavaScript through DOM Manipulation.
+  * npm for mangaging project dependencies.
+  * Webpack and babel to bundle and transpile the source JavaScript Code.
 
 ## Implementation Timeline
-  * Friday Afternoon & Weekend: Develop game logic and functionality, along with simple A.I.
-  * Monday: Make HTML shell and set up DOM Manipulation
-  * Tuesday: Create decks for users and A.I. along with art associated with it, along with starting JavaScript and CSS animations
-  * Wednesday: Finish up animations and quality of life updates
-  * Thursday Morning: Deploy onto Github Pages
-
-## Bonus Features:
-  * Add Power Up Cards
-  * Allow users to view deck list
-  * Allow users to build deck
-  * Allow users to explore more Greek lore and mythology through deck list
-  * Smarter A.I.s
+  * Friday Afternoon & Weekend: Built card, hand, and deck classes and objects along with corresponding DOMs for user interactivity.
+  * Monday: Implemented game logic for winning rounds, along with quality of life improvements to cards.
+  * Tuesday: Built A.I. and corresponding classes and game logic.
+  * Wednesday: Allowed for multiple rounds to be played and implemented game win logics.
+  * Thursday Morning: Deploy onto GitHub Pages along with polishing user interface and experience.
