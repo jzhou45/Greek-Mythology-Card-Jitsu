@@ -72,9 +72,11 @@ Game.prototype.winRound = function(){
     if (this.winByType(playerCard, aiCard) === "tie") return;
     if (this.winByType(playerCard, aiCard)){
         this.playerTally.points.push(playerCard);
+        this.playerTally.append();
         this.visualizePoints("player", playerCard);
     }else {
         this.aiTally.points.push(aiCard);
+        this.aiTally.append();
         this.visualizePoints("ai", aiCard);
     }
     return;
