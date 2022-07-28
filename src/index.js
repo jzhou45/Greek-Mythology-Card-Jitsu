@@ -170,8 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const volumeAndInstructions = document.getElementById("volume-and-instructions");
     const volume = document.querySelector("#volume");
     volume.addEventListener("click", playOrPause);
+    volume.addEventListener("mouseover", iconHover);
+    volume.addEventListener("mouseout", iconUnhover);
 
-    // volumeAndInstructions.style.display = "none";
+    volumeAndInstructions.style.display = "none";
 
     const instructionsIcon = document.getElementById("instructions-in-game");
     const inGameInstructions = document.getElementById("center-instructions");
@@ -179,17 +181,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let instructionsDisplayed = false;
     instructionsIcon.addEventListener("click", displayInstructions);
+    instructionsIcon.addEventListener("mouseover", iconHover);
+    instructionsIcon.addEventListener("mouseout", iconUnhover);
+
+    function iconHover(){
+        this.style.opacity = "75%"
+    }
+
+    function iconUnhover(){
+        this.style.opacity = "50%"
+    }
 
 
     function displayInstructions(){
         if (instructionsDisplayed){
             instructionsDisplayed = false;
             inGameInstructions.style.display = "none";
-            instructionsIcon.children[0].outerHTML = "<i class='fa-solid fa-info fa-2xl'></i>"
+            instructionsIcon.children[0].outerHTML = "<i class='fa-solid fa-info fa-2xl'></i>";
+            instructionsIcon.style.backgroundColor = "white";
         }else{
             instructionsDisplayed = true;
-            inGameInstructions.style.display = "flex"
-            instructionsIcon.children[0].outerHTML = "<i class='fa-solid fa-x fa-2xl'></i>"
+            inGameInstructions.style.display = "flex";
+            instructionsIcon.children[0].outerHTML = "<i class='fa-solid fa-x fa-2xl'></i>";
+            instructionsIcon.style.backgroundColor = "#cc0102";
         }
     }
 
