@@ -31,12 +31,7 @@ Game.prototype.start = function(){
             }, 2000);
         } else if (game.playerTally.win() || game.aiTally.win()){
             clearInterval(round);
-            if (game.playerTally.win()){ 
-                alert("User has won");
-            } else{
-                alert("ai has won");
-            }
-
+            document.getElementById("endscreen").style.display = "flex";
         }
     }, 3500);
 }

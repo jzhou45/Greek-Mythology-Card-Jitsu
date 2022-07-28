@@ -6,7 +6,7 @@ import Board from "./scripts/board.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    var game = new Game();
+    let game = new Game();
 
     function setLeft(card){
         const arr = [];
@@ -260,6 +260,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function nextUnhover(){
         this.style.color = "black";
+    }
+
+    const restart = document.getElementById("restart-button");
+    restart.addEventListener("click", restartGame);
+
+    const endpage = document.getElementById("endscreen");
+    endpage.style.display = "none";
+
+    function restartGame(){
+        location.reload();
     }
 
 });
