@@ -177,11 +177,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const inGameInstructions = document.getElementById("center-instructions");
     inGameInstructions.style.display = "none";
 
+    let instructionsDisplayed = false;
     instructionsIcon.addEventListener("click", displayInstructions);
 
 
     function displayInstructions(){
-        inGameInstructions.style.display = "flex"
+        if (instructionsDisplayed){
+            instructionsDisplayed = false;
+            inGameInstructions.style.display = "none";
+            instructionsIcon.children[0].outerHTML = "<i class='fa-solid fa-info fa-2xl'></i>"
+        }else{
+            instructionsDisplayed = true;
+            inGameInstructions.style.display = "flex"
+            instructionsIcon.children[0].outerHTML = "<i class='fa-solid fa-x fa-2xl'></i>"
+        }
     }
 
 
