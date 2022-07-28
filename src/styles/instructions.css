@@ -1,4 +1,4 @@
-#instructions > div > img{
+#instructions > div > img, #show-instructions > div > img{
     width: 3vw;
     height: auto;
 }
@@ -8,7 +8,7 @@
     height: auto;
 }
 
-#instructions {
+#instructions, #show-instructions {
     font-family: 'Caesar Dressing';
     font-size: 3vh;
     width: 35vw;
@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-#instructions > div{
+#instructions > div, #instructions-in-game > div > div{
     display: flex;
     align-items: center;
     justify-content: center;

@@ -171,7 +171,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const volume = document.querySelector("#volume");
     volume.addEventListener("click", playOrPause);
 
-    volumeAndInstructions.style.display = "none";
+    // volumeAndInstructions.style.display = "none";
+
+    const instructionsIcon = document.getElementById("instructions-in-game");
+    const inGameInstructions = document.getElementById("center-instructions");
+    inGameInstructions.style.display = "none";
+
+    instructionsIcon.addEventListener("click", displayInstructions);
+
+
+    function displayInstructions(){
+        inGameInstructions.style.display = "flex"
+    }
+
 
     let musicIsPlaying = true;
 

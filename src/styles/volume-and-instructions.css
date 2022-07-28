@@ -1,5 +1,4 @@
-#volume{
-    position: absolute;
+#volume, #instructions-in-game{
     border-radius: 5px;
     border: 2px solid black;
     background: white;
@@ -9,6 +8,24 @@
     width: 3.5em;
     height: 3.5em;
     opacity: 50%;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+#center-instructions{
+    display: flex;
+    justify-content: center;
+}
+
+#show-instructions{
+    position: absolute;
+    top: 5vh;
+    height: 60vh;
+    width: 80vw;
+    z-index: 99999999999;
+    overflow: scroll;
+    opacity: 90%;
+    background-color: #FAFAFA;
 }
 
 #volume-and-instructions{

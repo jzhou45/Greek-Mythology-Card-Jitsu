@@ -324,7 +324,7 @@ table {
 /*!***********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css ***!
   \***********************************************************************************************************/
-#instructions > div > img{
+#instructions > div > img, #show-instructions > div > img{
     width: 3vw;
     height: auto;
 }
@@ -334,7 +334,7 @@ table {
     height: auto;
 }
 
-#instructions {
+#instructions, #show-instructions {
     font-family: 'Caesar Dressing';
     font-size: 3vh;
     width: 35vw;
@@ -347,7 +347,7 @@ table {
     align-items: center;
 }
 
-#instructions > div{
+#instructions > div, #instructions-in-game > div > div{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -367,11 +367,10 @@ table {
     height: 30vh;
     width: auto;
 }
-/*!*****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/volume.css ***!
-  \*****************************************************************************************************/
-#volume{
-    position: absolute;
+/*!**********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/volume-and-instructions.css ***!
+  \**********************************************************************************************************************/
+#volume, #instructions-in-game{
     border-radius: 5px;
     border: 2px solid black;
     background: white;
@@ -381,6 +380,24 @@ table {
     width: 3.5em;
     height: 3.5em;
     opacity: 50%;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+#center-instructions{
+    display: flex;
+    justify-content: center;
+}
+
+#show-instructions{
+    position: absolute;
+    top: 5vh;
+    height: 60vh;
+    width: 80vw;
+    z-index: 99999999999;
+    overflow: scroll;
+    opacity: 90%;
+    background-color: #FAFAFA;
 }
 
 #volume-and-instructions{
