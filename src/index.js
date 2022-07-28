@@ -3,7 +3,6 @@ import Deck from "./scripts/deck.js";
 import Hand from "./scripts/hand.js";
 import Game from "./scripts/game.js";
 import Board from "./scripts/board.js";
-import Volume from "./scripts/volume.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -177,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (musicIsPlaying){
             musicIsPlaying = false;
             battleMusic.pause();
+            battleMusic.currentTime = 0;
         } else{
             musicIsPlaying = true;
             battleMusic.play();
