@@ -162,6 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
     next.addEventListener("mouseover", nextHover);
     next.addEventListener("mouseout", nextUnhover);
 
+    const gong = document.querySelector("#gong");
+
     instructions.style.display = "none";
 
     function startGame(){
@@ -176,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function goToInstructions(){
         titlescreen.style.display = "none";
         instructions.style.display = "flex";
+        gong.play();
     }
 
     function nextHover(){
