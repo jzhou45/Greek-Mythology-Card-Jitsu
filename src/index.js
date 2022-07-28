@@ -163,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     next.addEventListener("mouseout", nextUnhover);
 
     const gong = document.querySelector("#gong");
+    gong.volume = 0.8;
 
     instructions.style.display = "none";
 
