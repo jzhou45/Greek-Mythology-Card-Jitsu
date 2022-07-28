@@ -167,6 +167,21 @@ document.addEventListener('DOMContentLoaded', () => {
     gong.volume = 0.8;
 
     const battleMusic = document.querySelector("#battle-song");
+    
+    const volume = document.getElementById("volume");
+    volume.addEventListener("click", playOrPause);
+    let musicIsPlaying = true;
+
+
+    function playOrPause(){
+        if (musicIsPlaying){
+            musicIsPlaying = false;
+            battleMusic.pause();
+        } else{
+            musicIsPlaying = true;
+            battleMusic.play();
+        }
+    }
 
     instructions.style.display = "none";
 
@@ -177,8 +192,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.backgroundRepeat = "no-repeat";
         gamediv.style.visibility = "visible";
         game.start();
-        const volume = new Volume();
-        volume.load();
+        const sound = document.getElementById("volume");
+        const img = document.createElement("img");
+        img.src = "src/assets/volume.png";
+        sound.appendChild(img);
+        battleMusic.play();
     }
     
     function goToInstructions(){
