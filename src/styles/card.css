@@ -49,14 +49,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 60vw;
     height: 44vh;
     aspect-ratio: 280/71;
     border: 1vh outset #C0C0C0;
     overflow: hidden;
-
+    margin-top: 50vh;
 }
 
 .hand-background{
@@ -64,6 +64,7 @@
     width: 5760px;
     height: 1080px;
     animation: slide 120s linear infinite;
+    -webkit-animation: 120s slide infinite;
     position: absolute;
     z-index: -10;
     opacity: 75%;
