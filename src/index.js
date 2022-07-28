@@ -69,12 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function hover(){
         this.style.overflow = "visible";
         this.style.bottom = "15vh";
+        this.style.cursor = "pointer";
         displayCardName(this);
     }
 
     function unhover(){
         this.style.overflow = "hidden";
         this.style.bottom = "10vh";
+        this.style.cursor = "default";
         undisplayCardName(this);
     }
 
@@ -196,11 +198,13 @@ document.addEventListener('DOMContentLoaded', () => {
     instructionsIcon.addEventListener("mouseout", iconUnhover);
 
     function iconHover(){
-        this.style.opacity = "75%"
+        this.style.opacity = "75%";
+        this.style.cursor = "pointer";
     }
 
     function iconUnhover(){
-        this.style.opacity = "50%"
+        this.style.opacity = "50%";
+        this.style.cursor = "default";
     }
 
 
