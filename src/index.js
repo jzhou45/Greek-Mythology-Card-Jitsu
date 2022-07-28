@@ -2,7 +2,8 @@ import Card from './scripts/card.js';
 import Deck from "./scripts/deck.js";
 import Hand from "./scripts/hand.js";
 import Game from "./scripts/game.js";
-import Board from "./scripts/board.js"
+import Board from "./scripts/board.js";
+import Volume from "./scripts/volume.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -165,6 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const gong = document.querySelector("#gong");
     gong.volume = 0.8;
 
+    const battleMusic = document.querySelector("#battle-song");
+
     instructions.style.display = "none";
 
     function startGame(){
@@ -174,6 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.backgroundRepeat = "no-repeat";
         gamediv.style.visibility = "visible";
         game.start();
+        const volume = new Volume();
+        volume.load();
     }
     
     function goToInstructions(){
