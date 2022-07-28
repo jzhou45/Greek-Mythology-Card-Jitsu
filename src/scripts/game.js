@@ -15,7 +15,6 @@ Game.prototype.moveFromHandToBoard = function(index){
     const card = this.hand.playCard(index);
     this.board.play(card);
     this.board.moveCardToBoard();
-    this.hand.draw();
 }
 
 Game.prototype.start = function(){
@@ -26,6 +25,7 @@ Game.prototype.start = function(){
             setTimeout(function(){
                 game.board.clear();
                 game.ai.clear();
+                game.hand.draw();
                 game.countdown();
             }, 2000);
         } else if (game.playerTally.win() || game.aiTally.win()){

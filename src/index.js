@@ -102,8 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById(`${cardIdString}-name`).children[0].innerHTML = "";
     }
 
+    let cardAfterDraw;
+
     function playCard(){
-        this.style.display = "none";
         let index;
         if (this.id === "card1"){
             index = 0;
@@ -119,7 +120,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (game.board.board === null){
             game.moveFromHandToBoard(index);
         }
-        this.style.display = "flex";
+        this.style.display = "none";
+        cardAfterDraw = this;
+    }
+
+    setInterval(displayCardAfterDraw, 1000);
+
+    function displayCardAfterDraw(){
+        const timer = document.getElementById("timer");
+        if (timer.innerHTML === "20"){
+            cardAfterDraw.style.display = "flex";
+        }
     }
 
     let gamediv = document.getElementById("game")
