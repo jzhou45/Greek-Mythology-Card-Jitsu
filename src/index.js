@@ -268,12 +268,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const restart = document.getElementById("restart-button");
     restart.addEventListener("click", restartGame);
+    restart.addEventListener("mouseover", restartHover);
+    restart.addEventListener("mouseout", restartUnhover);
 
     const endpage = document.getElementById("endscreen");
     endpage.style.display = "none";
 
     function restartGame(){
         location.reload();
+    }
+
+    function restartHover(){
+        this.style.color = "#96ae8e";
+        this.style.textShadow = "#789082 0.1vw 0.3vh";
+    }
+
+    function restartUnhover(){
+        this.style.color = "black";
+        this.style.textShadow = "white 0 0";
     }
 
 });
