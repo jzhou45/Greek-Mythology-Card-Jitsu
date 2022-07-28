@@ -192,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.backgroundRepeat = "no-repeat";
         gamediv.style.visibility = "visible";
         game.start();
+        battleMusic.play();
     }
     
     function goToInstructions(){
