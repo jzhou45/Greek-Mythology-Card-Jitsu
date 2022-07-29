@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function goToLinkedIn(){
-        window.open("linkedin.com/in/jonathanzhou77/", "_blank");
+        window.open("https://www.linkedin.com/in/jonathanzhou77/", "_blank");
     }
 
     function startGame(){

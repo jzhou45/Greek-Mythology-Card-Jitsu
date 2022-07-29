@@ -22,7 +22,7 @@
     top: 5vh;
     height: 60vh;
     width: 80vw;
-    z-index: 99999999999;
+    z-index: 999;
     overflow: scroll;
     opacity: 90%;
     background-color: #FAFAFA;
@@ -34,5 +34,5 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    z-index: 9999999999;
+    z-index: 999;
 }
