@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayCardAfterDraw(){
         const timer = document.getElementById("timer");
-        if (timer.innerHTML === "20"){
+        if (cardAfterDraw && timer.innerHTML === "20"){
             cardAfterDraw.style.display = "flex";
         }
     }
