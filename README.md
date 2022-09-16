@@ -85,3 +85,29 @@ This project will is implemented with the following technologies:
 
 ## Future Implementations:
   * Improve A.I. to be more human like and play more predicatable cards.
+
+## CC Licensing:
+  * Personal link icons and modal icons provided by [Font Awesome](https://fontawesome.com/)
+  * Favicon from [Central Davidson High School logo](https://www.highschoolot.com/content/image/5258959/)
+  * Gong sound effect from [Ryan Lloyd](https://www.youtube.com/watch?v=kZ70uUp9eWo)
+  * Background music from [Leonidas Succession](https://www.youtube.com/watch?v=F63cjnBRNo8&t=26s) by [Chulainn](https://www.youtube.com/c/CharlesChulainn)
+  * Background image from [Assassin's Creed Odyssey](https://www.ubisoft.com/en-us/game/assassins-creed/odyssey)
+  * Achilles image from [Wargod]https://www.facebook.com/legendofthecryptids/)
+  * Aphrodite image from [Miranda by Thomas Francis Dicksee](https://artvee.com/dl/miranda-3/)
+  * Ares image from [Ares Miaiphonos by GENZOMAN](https://www.deviantart.com/genzoman/art/Ares-Miaiphonos-135998313)
+  * Arion image from Georg Simon Winter von Adlersflügel
+  * Athena image from [bachzim](https://www.deviantart.com/bachzim/art/Athena-899463203)
+  * Cereberus and Theseus image from [Hades](https://www.supergiantgames.com/games/hades/)
+  * Chiron image from [Smite](https://www.smitegame.com/)
+  * Echo image from Echo and Narcissus by John William Waterhouse
+  * Er image from Ananke by Platone
+  * Eurydice image from Wounded Eurydice by Jean-Baptiste-Camille Corot
+  * Hades image from [Aleksandra Jędrasik](https://www.artstation.com/artwork/X9VxR)
+  * Helen image from Helon of Troy by Evelyn De Morgan
+  * Hephaestus image from [Mykhailo Kryvtsov](https://www.artstation.com/artwork/LaLmP)
+  * Hera and Porphyrion from [Rick Riordan](https://rickriordan.com/)
+  * Heracles image from [The God of High School](https://www.webtoons.com/en/action/the-god-of-high-school/list?title_no=66&page=1)
+  * Narcissus image from Narcissus by Michelangelo Merisi da Caravaggio
+  * Paris image from Paris in the Phrygian Cap by Antoni Brodowski
+  * Persephone image from [eloizz_art](https://twitter.com/eloizz_art/status/1387433361015193600?lang=ga)
+  * Triton image from The Little Mermaid by Disney
