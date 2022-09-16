@@ -32,7 +32,36 @@ In Olympus Card-Jitsu, users will be able to:
   * Have cards be played for them, if timer runs out or player is away from keyboard.
   * Restart game.
 
-![alt text](./ocj_gameplay (1).gif)
+![alt text](./ocj_gameplay.gif)
+
+```js
+Game.prototype.countdown = function(){
+    this.board.board = null;
+    this.ai.board = null;
+    let sec = 20;
+    let game = this;
+    let timer = setInterval( function(){
+        document.getElementById('timer').innerHTML=sec;
+        sec--;
+        if (game.board.board){
+            clearInterval(timer);
+            game.ai.play();
+            game.winRound();
+            document.getElementById('timer').innerHTML="0";
+            return;
+        }
+        if (sec < 0){
+            clearInterval(timer);
+            game.moveFromHandToBoard(0);
+            document.getElementById("card1").style.display = "none";
+            game.ai.play();
+            game.winRound();
+            document.getElementById('timer').innerHTML="0";
+            return;
+        };
+    }, 1000);
+}
+```
 
 
 In addition, this project includes:
@@ -52,3 +81,7 @@ This project will is implemented with the following technologies:
   * Tuesday: Built A.I. and corresponding classes and game logic.
   * Wednesday: Allowed for multiple rounds to be played and implemented game win logics.
   * Thursday Morning: Deploy onto GitHub Pages along with polishing user interface and experience.
+
+
+## Future Implementations:
+  * Improve A.I. to be more human like and play more predicatable cards.
