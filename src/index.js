@@ -1,8 +1,4 @@
-import Card from './scripts/card.js';
-import Deck from "./scripts/deck.js";
-import Hand from "./scripts/hand.js";
 import Game from "./scripts/game.js";
-import Board from "./scripts/board.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -15,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const offset = cardId.getBoundingClientRect();
         arr.push(offset.left);
         return arr;
-    }
+    };
 
     let card1Arr = setLeft("card1");
     let card2Arr = setLeft("card2");
@@ -29,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let left = cardArr[1];
         card.style.position = "fixed";
         card.style.left = left;
-    }
+    };
 
     setCardPositions(card1Arr);
     setCardPositions(card2Arr);
@@ -39,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setBoardPositions(cardArr1, cardArr2, board){
         board.style.left = (cardArr1 + cardArr2) / 2
-    }
+    };
 
     const playerBoard = document.getElementById("player-board");
     setBoardPositions(card1Arr[1], card2Arr[1], playerBoard);
@@ -58,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener("mouseover", hover, false);
         card.addEventListener("mouseout", unhover, false);
         card.addEventListener("click", playCard);
-    }
+    };
 
     addEventListenerToCard(card1Arr);
     addEventListenerToCard(card2Arr);
@@ -71,19 +67,19 @@ document.addEventListener('DOMContentLoaded', () => {
         this.style.bottom = "15vh";
         this.style.cursor = "pointer";
         displayCardName(this);
-    }
+    };
 
     function unhover(){
         this.style.overflow = "hidden";
         this.style.bottom = "10vh";
         this.style.cursor = "default";
         undisplayCardName(this);
-    }
+    };
 
     function setNamesLeft(cardName, cardsArr){
         const name = document.getElementById(cardName);
         name.style.left = cardsArr[1];
-    }
+    };
 
     setNamesLeft("card1-name", card1Arr);
     setNamesLeft("card2-name", card2Arr);
@@ -97,12 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = game.hand.whichCard(cardIdString);
         const cardIdName = document.getElementById(`${cardIdString}-name`);
         cardIdName.children[0].innerHTML = card.name;
-    }
+    };
 
     function undisplayCardName(element){
         const cardIdString = String(element.id);
         document.getElementById(`${cardIdString}-name`).children[0].innerHTML = "";
-    }
+    };
 
     let cardAfterDraw;
 
@@ -118,13 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
             index = 3;
         } else{
             index = 4;
-        }
+        };
         if (game.board.board === null){
             game.moveFromHandToBoard(index);
-        }
+        };
         this.style.display = "none";
         cardAfterDraw = this;
-    }
+    };
 
     setInterval(displayCardAfterDraw, 1000);
 
@@ -132,8 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const timer = document.getElementById("timer");
         if (cardAfterDraw && timer.innerHTML === "20"){
             cardAfterDraw.style.display = "flex";
-        }
-    }
+        };
+    };
 
     let gamediv = document.getElementById("game")
     gamediv.style.visibility = "hidden";
@@ -153,18 +149,18 @@ document.addEventListener('DOMContentLoaded', () => {
         cardJitsu.style.color = "#c6934b"
         cardJitsu.style.textShadow = "#703529 1vw 1vh";
         cardJitsu.style.cursor = "pointer";
-    }
+    };
     
     function unenlarge(){
-        const olympus = this.children[0]
-        const cardJitus = this.children[1]
+        const olympus = this.children[0];
+        const cardJitus = this.children[1];
         olympus.style.fontSize = "30vh";
         olympus.style.color = "#283d70";
         olympus.style.textShadow = "#2e3546 1vw 1vh";
         cardJitus.style.fontSize = "30vh";
         cardJitus.style.color = "#283d70"
         cardJitus.style.textShadow = "#2e3546 1vw 1vh";
-    }
+    };
 
     titlescreen.addEventListener("click", goToInstructions);
     
@@ -200,12 +196,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function iconHover(){
         this.style.opacity = "75%";
         this.style.cursor = "pointer";
-    }
+    };
 
     function iconUnhover(){
         this.style.opacity = "50%";
         this.style.cursor = "default";
-    }
+    };
 
 
     function displayInstructions(){
@@ -214,13 +210,13 @@ document.addEventListener('DOMContentLoaded', () => {
             inGameInstructions.style.display = "none";
             instructionsIcon.children[0].outerHTML = "<i class='fa-solid fa-info fa-2xl'></i>";
             instructionsIcon.style.backgroundColor = "white";
-        }else{
+        } else{
             instructionsDisplayed = true;
             inGameInstructions.style.display = "flex";
             instructionsIcon.children[0].outerHTML = "<i class='fa-solid fa-x fa-2xl'></i>";
             instructionsIcon.style.backgroundColor = "#cc0102";
-        }
-    }
+        };
+    };
 
 
     let musicIsPlaying = true;
@@ -235,29 +231,36 @@ document.addEventListener('DOMContentLoaded', () => {
             musicIsPlaying = true;
             battleMusic.play();
             volume.children[0].outerHTML = "<i class='fa-solid fa-volume-high fa-2xl'></i>";
-        }
-    }
+        };
+    };
 
     instructions.style.display = "none";
 
     const github = document.getElementById("github");
     const linkedin = document.getElementById("linkedin");
+    const angellist = document.getElementById("angellist");
     linkedin.addEventListener("mouseover", linksHover);
     linkedin.addEventListener("click", goToLinkedIn);
     github.addEventListener("mouseover", linksHover);
     github.addEventListener("click", goToGithub);
+    angellist.addEventListener("mouseover", linksHover);
+    angellist.addEventListener("click", goToAngelList);
 
     function linksHover(){
         this.style.cursor = "pointer";
-    }
+    };
 
     function goToGithub(){
         window.open("https://github.com/jzhou45", "_blank");
-    }
+    };
 
     function goToLinkedIn(){
         window.open("https://www.linkedin.com/in/jonathanzhou77/", "_blank");
-    }
+    };
+
+    function goToAngelList(){
+        window.open("https://angel.co/u/jonathan-zhou-5", "_blank");
+    };
 
     function startGame(){
         instructions.style.display = "none";
@@ -269,22 +272,22 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementsByTagName("header")[0].style.filter = "grayscale(1) invert(1)";
         volumeAndInstructions.style.display = "flex";
         battleMusic.play();
-    }
+    };
     
     function goToInstructions(){
         titlescreen.style.display = "none";
         instructions.style.display = "flex";
         gong.play();
-    }
+    };
 
     function nextHover(){
         this.style.color = "#c6934b";
         this.style.cursor = "pointer";
-    }
+    };
 
     function nextUnhover(){
         this.style.color = "black";
-    }
+    };
 
     const restart = document.getElementById("restart-button");
     restart.addEventListener("click", restartGame);
@@ -296,16 +299,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function restartGame(){
         location.reload();
-    }
+    };
 
     function restartHover(){
         this.style.color = "#96ae8e";
         this.style.textShadow = "#789082 0.1vw 0.3vh";
-    }
+    };
 
     function restartUnhover(){
         this.style.color = "black";
         this.style.textShadow = "white 0 0";
-    }
+    };
 
 });
