@@ -3,7 +3,7 @@
 ## Olympus Card-Jitsu
 [Olympus Card-Jitsu](https://jzhou45.github.io/Olympus-Card-Jitsu/) combines an agglomeration of favorite things from my childhood, including Club Penguin, ninjas (which inspired the original Card-Jitsu), and Greek myths and the Percy Jackson series.
 
-Olympus Card-Jitsu aims to make a faithful adapatation to the core Card-Jitsu gameplay with new classes and cards based on Greek mythology and lore. In order to keep the game a client-side project, the opponenet will be a simple A.I., rather than an opposing player.
+Olympus Card-Jitsu aims to make a faithful adaptation to the core Card-Jitsu gameplay with new classes and cards based on Greek mythology and lore. In order to keep the game a client-side project, the opponent will be a simple A.I., rather than an opposing player.
 
 ## Background
 
