@@ -12,10 +12,21 @@ class Hand{
             this.hand[i] = this.draw();
         };
         return this.hand;
-    };
+    }
 
     showDraw(index){
-        let card = {card: this.hand[index], id: `card${index + 1}`}
+        let card;
+        if (index === 0){
+            card = {card: this.hand[0], id: "card1"};
+        } else if (index === 1){
+            card = {card: this.hand[1], id: "card2"};
+        } else if (index === 2){
+            card = {card: this.hand[2], id: "card3"};
+        } else if (index === 3){
+            card = {card: this.hand[3], id: "card4"};
+        } else {
+            card = {card: this.hand[4], id: "card5"};
+        };
         this.setCardValues(card);
     };
 
@@ -44,7 +55,7 @@ class Hand{
         const newCard = this.deck.draw();
         const index = this.findMissingCardIndex();
         this.hand[index] = newCard;
-        this.showDraw(index);
+        this.showDraw(index)
         return newCard;
     };
 
@@ -68,7 +79,17 @@ class Hand{
     };
 
     whichCard(element){
-        return this.hand[parseInt(element[-1]) - 1]
+        if (element === "card1"){
+            return this.hand[0];
+        } else if (element === "card2"){
+            return this.hand[1];
+        } else if (element === "card3"){
+            return this.hand[2];
+        } else if (element === "card4"){
+            return this.hand[3];
+        } else{
+            return this.hand[4];
+        };
     };
 };
 
