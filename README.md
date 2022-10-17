@@ -3,7 +3,7 @@
 ## Olympus Card-Jitsu
 [Olympus Card-Jitsu](https://jzhou45.github.io/Olympus-Card-Jitsu/) combines an agglomeration of favorite things from my childhood, including Club Penguin, ninjas (which inspired the original Card-Jitsu), and Greek myths and the Percy Jackson series.
 
-Olympus Card-Jitsu aims to make a faithful adapatation to the core Card-Jitsu gameplay with new classes and cards based on Greek mythology and lore. In order to keep the game a client-side project, the opponenet will be a simple A.I., rather than an opposing player.
+Olympus Card-Jitsu aims to make a faithful adaptation to the core Card-Jitsu gameplay with new classes and cards based on Greek mythology and lore. In order to keep the game a client-side project, the opponent will be a simple A.I., rather than an opposing player.
 
 ## Background
 
@@ -32,7 +32,36 @@ In Olympus Card-Jitsu, users will be able to:
   * Have cards be played for them, if timer runs out or player is away from keyboard.
   * Restart game.
 
-![alt text](./ocj_gameplay (1).gif)
+![alt text](./ocj_gameplay.gif)
+
+```js
+Game.prototype.countdown = function(){
+    this.board.board = null;
+    this.ai.board = null;
+    let sec = 20;
+    let game = this;
+    let timer = setInterval( function(){
+        document.getElementById('timer').innerHTML=sec;
+        sec--;
+        if (game.board.board){
+            clearInterval(timer);
+            game.ai.play();
+            game.winRound();
+            document.getElementById('timer').innerHTML="0";
+            return;
+        }
+        if (sec < 0){
+            clearInterval(timer);
+            game.moveFromHandToBoard(0);
+            document.getElementById("card1").style.display = "none";
+            game.ai.play();
+            game.winRound();
+            document.getElementById('timer').innerHTML="0";
+            return;
+        };
+    }, 1000);
+}
+```
 
 
 In addition, this project includes:
@@ -52,3 +81,33 @@ This project will is implemented with the following technologies:
   * Tuesday: Built A.I. and corresponding classes and game logic.
   * Wednesday: Allowed for multiple rounds to be played and implemented game win logics.
   * Thursday Morning: Deploy onto GitHub Pages along with polishing user interface and experience.
+
+
+## Future Implementations:
+  * Improve A.I. to be more human like and play more predicatable cards.
+
+## CC Licensing:
+  * Personal link icons and modal icons provided by [Font Awesome](https://fontawesome.com/)
+  * Favicon from [Central Davidson High School logo](https://www.highschoolot.com/content/image/5258959/)
+  * Gong sound effect from [Ryan Lloyd](https://www.youtube.com/watch?v=kZ70uUp9eWo)
+  * Background music from [Leonidas Succession](https://www.youtube.com/watch?v=F63cjnBRNo8&t=26s) by [Chulainn](https://www.youtube.com/c/CharlesChulainn)
+  * Background image from [Assassin's Creed Odyssey](https://www.ubisoft.com/en-us/game/assassins-creed/odyssey)
+  * Achilles image from [Wargod]https://www.facebook.com/legendofthecryptids/)
+  * Aphrodite image from [Miranda by Thomas Francis Dicksee](https://artvee.com/dl/miranda-3/)
+  * Ares image from [Ares Miaiphonos by GENZOMAN](https://www.deviantart.com/genzoman/art/Ares-Miaiphonos-135998313)
+  * Arion image from Georg Simon Winter von Adlersflügel
+  * Athena image from [bachzim](https://www.deviantart.com/bachzim/art/Athena-899463203)
+  * Cereberus and Theseus image from [Hades](https://www.supergiantgames.com/games/hades/)
+  * Chiron image from [Smite](https://www.smitegame.com/)
+  * Echo image from Echo and Narcissus by John William Waterhouse
+  * Er image from Ananke by Platone
+  * Eurydice image from Wounded Eurydice by Jean-Baptiste-Camille Corot
+  * Hades image from [Aleksandra Jędrasik](https://www.artstation.com/artwork/X9VxR)
+  * Helen image from Helon of Troy by Evelyn De Morgan
+  * Hephaestus image from [Mykhailo Kryvtsov](https://www.artstation.com/artwork/LaLmP)
+  * Hera and Porphyrion from [Rick Riordan](https://rickriordan.com/)
+  * Heracles image from [The God of High School](https://www.webtoons.com/en/action/the-god-of-high-school/list?title_no=66&page=1)
+  * Narcissus image from Narcissus by Michelangelo Merisi da Caravaggio
+  * Paris image from Paris in the Phrygian Cap by Antoni Brodowski
+  * Persephone image from [eloizz_art](https://twitter.com/eloizz_art/status/1387433361015193600?lang=ga)
+  * Triton image from The Little Mermaid by Disney
