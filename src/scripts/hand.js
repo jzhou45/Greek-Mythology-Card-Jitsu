@@ -12,7 +12,7 @@ class Hand{
             this.hand[i] = this.draw();
         };
         return this.hand;
-    }
+    };
 
     showDraw(index){
         let card;
