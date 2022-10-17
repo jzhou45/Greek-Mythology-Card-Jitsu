@@ -102,24 +102,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let cardAfterDraw;
 
+    
+
     function playCard(){
-        let index;
-        if (this.id === "card1"){
-            index = 0;
-        } else if (this.id === "card2"){
-            index = 1;
-        } else if (this.id === "card3"){
-            index = 2;
-        } else if (this.id === "card4"){
-            index = 3;
-        } else{
-            index = 4;
-        };
         if (game.board.board === null){
-            game.moveFromHandToBoard(index);
+            let index;
+            if (this.id === "card1"){
+                index = 0;
+            } else if (this.id === "card2"){
+                index = 1;
+            } else if (this.id === "card3"){
+                index = 2;
+            } else if (this.id === "card4"){
+                index = 3;
+            } else{
+                index = 4;
+            };
+            if (game.board.board === null){
+                game.moveFromHandToBoard(index);
+            };
+            this.style.display = "none";
+            cardAfterDraw = this;
         };
-        this.style.display = "none";
-        cardAfterDraw = this;
     };
 
     setInterval(displayCardAfterDraw, 1000);
