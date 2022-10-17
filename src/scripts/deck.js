@@ -40,35 +40,27 @@ const echo = new Card("Echo", "monster", "7", "#F8C8DC", "src/assets/echo.jpeg")
 const porphyrion = new Card("Porphyrion", "monster", "2", "#F8C8DC", "src/assets/porphyrion.webp");
 const echidna = new Card("Echidna", "monster", "3", "#F8C8DC", "src/assets/echidna.jpeg");
 
-function Deck(){
-    this.cards = [poseidon, orion, theseus, bellerophon, triton, proteus, minotaur, pegasus, arion,
-        zeus, athena, aphrodite, heracles, achilles, helen, medusa, hydra, chiron,
-        hades, persephone, plutus, orpheus, eurydice, er, cereberus, charon, typhon,
-        hera, ares, hephaestus, narcissus, paris, jason, echo, porphyrion, echidna
-    ];
-    this.shuffle();
-}
+class Deck{
+    constructor(){
+        this.cards = [poseidon, orion, theseus, bellerophon, triton, proteus, minotaur, pegasus, arion,
+            zeus, athena, aphrodite, heracles, achilles, helen, medusa, hydra, chiron,
+            hades, persephone, plutus, orpheus, eurydice, er, cereberus, charon, typhon,
+            hera, ares, hephaestus, narcissus, paris, jason, echo, porphyrion, echidna
+        ];
+        this.shuffle();
+    };
 
-Deck.prototype.shuffle = function(){
-    for (let i = 0; i < this.cards.length; i++){
-        const randomIndex = i + Math.floor(Math.random() * this.cards.length % (this.cards.length - i));
-        [this.cards[i], this.cards[randomIndex]] = [this.cards[randomIndex], this.cards[i]];
- }
-    return this.cards;
-}
+    shuffle(){
+        for (let i = 0; i < this.cards.length; i++){
+            const randomIndex = i + Math.floor(Math.random() * this.cards.length % (this.cards.length - i));
+            [this.cards[i], this.cards[randomIndex]] = [this.cards[randomIndex], this.cards[i]];
+        };
+        return this.cards;
+    };
 
-Deck.prototype.draw = function(){
-    return this.cards.pop();
-}
-
-// Deck.prototype.isEmpty = function(){
-//     if (this.cards.length === 0) return true;
-//     return false;
-// }
-
-// Deck.prototype.remainingCards = function(){
-//     return this.cards.length;
-// }
+    draw(){
+        return this.cards.pop();
+    };
+};
 
 export default Deck;
-// add refresh function in case deck runs out and the game hasn't ended
