@@ -105,7 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     function playCard(){
-        if (game.board.board === null){
+        let timer = document.getElementById("timer")
+
+        if (game.board.board === null && parseInt(timer.innerHTML) > 0 ){
             let index;
             if (this.id === "card1"){
                 index = 0;
