@@ -27,20 +27,20 @@ class Tally{
     };
 
     uniq(){
-        const arr = [];
+        const dict = {};
         const monsterVals = Object.keys(this.monster);
         const heroVals = Object.keys(this.hero);
         const godVals = Object.keys(this.god);
         for (let i = 0; i < monsterVals.length; i++){
-            if (!arr.includes(monsterVals[i])) arr.push[monsterVals[i]];
+            dict[monsterVals[i]] = i
         };
         for (let j = 0; j < heroVals.length; j++){
-            if (!arr.includes(heroVals[j])) arr.push(heroVals[j]);
+            dict[heroVals[j]] = j
         };
         for (let k = 0; k < godVals.length; k++){ 
-            if (!arr.includes(godVals[k])) arr.push(godVals[k]);
+            dict[godVals[k]] = k
         };
-        return arr;
+        return Object.keys(dict);
     };
 
     append(){
