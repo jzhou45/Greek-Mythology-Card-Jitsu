@@ -128,11 +128,14 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     };
 
-    setInterval(displayCardAfterDraw, 1000);
+    setInterval(displayCardAfterDraw, 100);
 
     function displayCardAfterDraw(){
         const timer = document.getElementById("timer");
-        if (cardAfterDraw && timer.innerHTML === "20"){
+
+        const notNull = (card) => card;
+
+        if (cardAfterDraw && timer.innerHTML === "20" && game.board.board === null && game.hand.hand.every(notNull)){
             cardAfterDraw.style.display = "flex";
         };
     };
